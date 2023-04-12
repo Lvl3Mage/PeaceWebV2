@@ -1,0 +1,167 @@
+.card {
+	overflow: hidden;
+	&--rounded {
+		border-radius: 10px;
+	}
+	&--shadow {
+		box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+	}
+	&-hover {
+		&--background-tint{
+
+			.card--background{
+				background-blend-mode: multiply;
+				transition: all 0.3s;
+			}
+			&:not(:hover){
+				.card--background{
+					background-color: #FFF !important;
+				}
+				
+			}
+		}
+		&--background-recolor{
+			.card--background{
+				transition: all 0.3s;
+				*{
+					transition: all 0.3s;
+				}
+			}
+			&--dark-green{
+				&:hover{
+					.card--background{
+						background-color: $darkGreen;
+						*:not(.card--mantain-text-color){
+
+							color: $white;
+						}
+					}
+					
+				}
+			}
+		}
+		&--opacity-blend{
+			.card--opacity-blend-element{
+				opacity: 0;
+				transition: all 0.3s;
+			}
+			&:hover{
+				.card--opacity-blend-element{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+}
+.z{
+	&--front{
+		z-index: 1;
+	}
+	&--mid{
+		z-index: 0;
+	}
+	&--back{
+		z-index: -1;
+
+	}
+}
+.background {
+	&--cover {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		left: 0;
+		width: 100%;
+	}
+	&--white{
+		background-color: $white;
+	}
+	&--dark-green {
+		background-color: $darkGreen;
+	}
+	&--pastel-green {
+		background-color: $pastelGreen;
+	}
+	&--opacity-0-7 {
+		opacity: 0.7;
+	}
+	&--opacity-0-1 {
+		opacity: 0.1;
+	}
+}
+
+a.btn{
+	display: inline-block;
+}
+.btn{
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	&--rounded{
+		&-5{
+			border-radius: 5px;
+		}
+		&-10{
+			border-radius: 10px;
+		}
+	}
+	&--M{
+		padding: 15px 35px;
+	}
+	&--dark-green{
+		transition: all 0.3s;
+		background-color: $darkGreen;
+		&:hover{
+			filter: brightness(0.8);
+		}
+		&:active{
+			filter: brightness(0.6);
+		}
+		&-border{
+			transition: all 0.3s;
+			border: 2px solid $darkGreen;
+			background: $white;
+			&:hover{
+				background: darken($darkGreen, 5);
+				color: $white;
+			}
+			&:active{
+				filter: brightness(0.6);
+			}
+		}
+	}
+
+
+
+	&--inline{
+		display: inline-block !important;
+	}
+	&--block{
+		display: block !important;
+	}
+}
+.button-tab{
+	background: $white;
+	color: $darkGreen;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 35px;
+	transition: all 0.3s;
+	&.active{
+		background: $darkGreen;
+		color: $white;
+	}
+	&:not(.active){
+		cursor: pointer;
+		&:hover{
+			filter: brightness(0.8);
+		}
+		&:active{
+			filter: brightness(0.6);
+		}	
+	}	
+}
+.hidden{
+	display: none;
+}

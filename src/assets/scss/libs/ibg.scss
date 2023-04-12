@@ -1,0 +1,10 @@
+.ibg{
+	background-repeat: no-repeat;
+	&--cover{
+		background-size: cover;
+		background-position: center center;
+	}
+	&--contain{
+		background-size: contain;
+	}
+}

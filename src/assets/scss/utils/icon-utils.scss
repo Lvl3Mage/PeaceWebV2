@@ -1,0 +1,19 @@
+.icon{
+	&--inherit{
+		color: inherit !important;
+		font-size: inherit !important;	
+	}
+	
+	&--XL{
+		font-size: 2em !important;
+	}
+	&--L{
+		font-size: 1.5em !important;
+	}
+	&--M{
+		font-size: 1em !important;
+	}
+	&--S{
+		font-size: 0.5em !important;
+	}
+}

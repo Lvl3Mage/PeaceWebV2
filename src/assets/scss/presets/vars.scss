@@ -1,0 +1,63 @@
+/* Vars:
+  ========================================================================== */
+
+// Fonts
+$textFont                : Roboto, sans-serif;
+// $titleFont               : RobotoCondensed, sans-serif;
+
+
+// Screen sizes
+$desktopWidth            : 1440px;
+$smDesktopWidth          : 1200px;
+$tabletWidth             : 992px;
+$smTabletWidth           : 768px;
+$phoneWidth              : 576px;
+$smPhoneWidth            : 375px;
+
+
+//Font sizes
+
+$fontSizeXXL_desktop     : 64px;
+$fontSizeXXL_mobile      : 54px;
+
+$fontSizeXL_desktop      : 52px;
+$fontSizeXL_mobile       : 32px;
+
+$fontSizeL_desktop       : 36px;
+$fontSizeL_mobile        : 26px;
+
+$fontSizeM_desktop       : 30px;
+$fontSizeM_mobile        : 22px;
+
+$fontSizeS_desktop       : 22px;
+$fontSizeS_mobile        : 18px;
+
+$fontSizeXS_desktop       : 20px;
+$fontSizeXS_mobile        : 16px;
+
+$fontSizeXXS_desktop      : 16px;
+$fontSizeXXS_mobile       : 12px;
+
+
+//Colors
+$white                   : #FFF;
+$darkGray                : #474747;
+$black                   : #000;
+$darkGreen               : #1A8400;
+$lightGreen              : #6FBC31;
+$pastelGreen             : #E2FFB1;;
+
+
+// Generic colors
+$backgroundColor         : #FFF;
+$highlightColor          : $darkGreen;
+
+// Font presets
+$defFont                 : $textFont;
+$defFontColor            : #000;
+$defFontSize_desktop     : $fontSizeXXS_desktop;
+$defFontSize_mobile      : $fontSizeXXS_mobile;
+$defFontWeight           : 400;
+$defLineHeight           : 1.2;
+
+

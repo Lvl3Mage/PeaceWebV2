@@ -1,0 +1,23 @@
+&{
+	&--100p{
+		height: 100%;
+	}
+	&--auto{
+		height: auto;
+	}
+	&--100{
+		min-height: 100px;
+	}
+	&--200{
+		min-height: 200px;
+	}
+	&--300{
+		min-height: 300px;
+	}
+	&--400{
+		min-height: 400px;
+	}
+	&--500{
+		min-height: 500px;
+	}
+}

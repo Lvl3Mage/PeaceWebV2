@@ -1,0 +1,26 @@
+@use 'sass:math';
+@import '../../../node_modules/modern-normalize/modern-normalize.css';
+@import './utils/mixins';
+
+@import './presets/fonts';
+@import './presets/vars';
+@import './presets/def-presets';
+
+
+//Libraries
+@import './libs/ibg'; // Also include in JS
+// @import './libs/modal'; // Also include in JS
+@import './libs/slick-stylize';
+
+@import './utils/def-slider';
+@import './presets/container';
+@import './utils/utils-collection';
+@import './utils/text-utils';
+@import './utils/icon-utils';
+@import './utils/img-utils';
+@import './utils/ratio-utils';
+
+@import './sections/header';
+@import './sections/generic-elements';
+@import './sections/front-page';
+@import './sections/footer';

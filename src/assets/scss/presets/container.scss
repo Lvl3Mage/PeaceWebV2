@@ -1,0 +1,31 @@
+.container{
+	box-sizing: border-box;
+	width: 1270px;
+	margin: 0 auto;
+}
+@media screen and (max-width: $desktopWidth) {
+	.container{
+		width: 1150px;
+	}
+}
+@media screen and (max-width: $smDesktopWidth) {
+	.container{
+		width: 960px;
+	}
+}
+@media screen and (max-width: $tabletWidth) {
+	.container{
+		width: 745px;
+	}
+}
+@media screen and (max-width: $smTabletWidth) {
+	.container{
+		width: 550px;
+	}
+}
+@media screen and (max-width: $phoneWidth) { 
+	.container{
+		width: 100%;
+		padding: 0 6px;
+	}
+} 

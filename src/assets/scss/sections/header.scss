@@ -1,0 +1,67 @@
+.header {
+	position: relative;
+	overflow: hidden;
+	&__menu {
+		padding: 15px 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		background: linear-gradient(90deg, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%);
+
+	}
+	&__logo {
+		flex: 0 0 200px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		margin: 0 20px;
+	}
+	&__navbar {
+		margin: 0 20px;
+		// flex: 0 0 50%;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__nav-element {
+		margin: 0 15px;
+		&.active{
+			color: $darkGreen;
+			font-weight: 700;
+		}
+	}
+	&__languages {
+		display: flex;
+
+	}
+	&__language {
+		margin: 0 5px;
+		width: 1.5em;
+		height: 1.5em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #A3A3A3;
+		padding: 3px;
+		border: 1px solid #D9D9D9;
+		border-radius: 3px;
+		&.active{
+			border-color: $darkGreen;
+			color: $darkGreen;
+		}
+	}
+	&__decor{
+		// @include breakpoint-down($tabletWidth){
+		// 	display: none;
+		// }
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 280px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		z-index: -1;
+	}
+}

@@ -1,0 +1,23 @@
+body{
+	font-family: $defFont;
+	color: $defFontColor;
+	@include fSize($tabletWidth, $phoneWidth, $defFontSize_desktop, $defFontSize_mobile);
+	font-weight: $defFontWeight;
+	line-height: $defLineHeight;
+
+	background-color: $backgroundColor;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	&.underline{
+		text-decoration: underline;
+	}
+}
+
+
+h2{
+	border-bottom: 2px solid #ACACAC;
+	margin: unset;
+}
