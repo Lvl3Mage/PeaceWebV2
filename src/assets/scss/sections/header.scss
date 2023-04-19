@@ -35,6 +35,9 @@
 			}
 			height: 100%;
 		}
+		@include breakpoint-down($phoneWidth){
+			height: 80%;
+		}
 	}
 	&__navbar {
 		margin: 0 20px;
@@ -56,7 +59,22 @@
 	}
 	&__languages {
 		display: flex;
-
+		@include breakpoint-down($tabletWidth){
+			transform: translateY(-100px);
+			border-right: 2px solid #D9D9D9;
+			padding-right: 10px;
+			margin-left: 50px;
+			font-size: 18px;
+			transition: all 0.6s;
+			&.active{
+				transform: translateY(0);
+			}
+		}
+		@include breakpoint-down($phoneWidth){
+			font-size: 14px;
+			margin-left: 0;
+			padding-right: 5px;
+		}
 	}
 	&__language {
 		margin: 0 5px;
@@ -136,7 +154,7 @@
 	// z-index: 100;
 	&.active{
 		.mob-menu__content{
-			transform: translateX(-100%);
+			transform: translateY(-100%);
 		}
 		// .mob-menu__overlay{
 		// 	width: 100vw;
@@ -162,8 +180,8 @@
 		position: fixed;
 		width: 100%;
 		height: calc(100vh - 90px);
-		left: 100%;
-		top: 90px;
+		left: 0;
+		top: calc(100vh);
 		background-color: #FFF;
 		padding: 0 5px;
 		border-top: 2px solid $darkGreen;
@@ -175,7 +193,8 @@
 		font-size: 18px;
 		list-style-type: none;
 		&>li{
-			padding: 5px;
+			// padding: 5px;
+			margin-bottom: 10px;
 			box-sizing: content-box;
 			span{
 				&:before{
@@ -201,16 +220,18 @@
 				border-radius: 5px;
 				// margin: 5px;
 				padding: 15px 30px;
+				// margin-bottom: 5px;
 				display: block;
 				// padding: 0 25px;
+				background: #fff;
 				color: #000;
 				transition: all 0.4s;
 				cursor: pointer;
-				background-clip: padding-box !important;
-				&:hover{
-					color: $highlightColor;
-					background: rgba(255,255,255,0.7);
-				}
+				// background-clip: padding-box !important;
+				// &:hover{
+				// 	color: $highlightColor;
+				// 	background: rgba(255,255,255,0.7);
+				// }
 				// padding: 4px;
 				// padding-right: 30px;
 				// border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -233,23 +254,26 @@
 			overflow: hidden;
 			&>ul{
 				padding: 0;
-				top: 100%;
+				// bottom: 0;
+				z-index: -10;
 				position: absolute;
 				width: 100%;
 				list-style-type: none;
 				&>li{
 					background: #E8FFC0;
-					padding: 0 25px;
+					padding: 15px 25px;
 					padding-left: 35px;
-					color: rgba(255,255,255,0.4);
+					color: $darkGreen;
+					font-weight: 400;
+					border-bottom: 2px solid $darkGreen;
 					cursor: pointer;
 					transition: all 0.4s;
-					background-clip: padding-box !important;
+					// background-clip: padding-box !important;
 					&:hover{
 						color: $highlightColor;
 						background: rgba(255,255,255,0.4);
 					}
-					border-bottom: 1px solid rgba(255,255,255,0.4);
+					// border-bottom: 1px solid rgba(255,255,255,0.4);
 					// &:last-child{
 					// 	border-bottom: 1px solid rgba(255,255,255,0.4);
 					// }
