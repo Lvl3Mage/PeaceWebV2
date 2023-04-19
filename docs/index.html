@@ -10,12 +10,12 @@
 
 <body>
 	<header class="header">
-		<div class="container">
+		<div class="container h--100p">
 			<div class="header__menu">
 				<div class="header__logo">
 					<img src="assets/img/biom.png" alt="">
 				</div>
-				<div class="header__navbar">
+				<div class="header__navbar header__desktop-element">
 					<div class="header__nav-element active">
 						<a>Главная</a>
 					</div>
@@ -43,10 +43,144 @@
 						<span>EN</span>
 					</a>
 				</div>
+				<div class="header__burger-wrapper">
+					<div class="header__burger burger" data-mob-menu-trigger>
+						<div class="burger__line"></div>
+						<div class="burger__line"></div>
+						<div class="burger__line"></div>
+					</div>	
+				</div>
 			</div>
-			<div class="header__decor">
+			<div class="header__decor header__desktop-element">
 				<img src="assets/img/decor-flowers1.png" alt="">
 			</div>
+		</div>
+		<div class="header__mob-menu mob-menu">
+			<div class="mob-menu__content">
+
+				<ul class="mob-menu__menu">
+					<li>
+						<span>
+							Home
+						</span>
+						<ul>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>
+							Home
+						</span>
+						<ul>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							Home
+						</a>
+						<ul>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							Home
+						</a>
+						<ul>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+							<li>
+								<a href="">Volunteers</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- <div class="mob-menu__menu" data-dropdown-menu-container>
+					<div class="mob-menu__menu-element" data-dropdown-wrapper>
+						<div class="mob-menu__menu-element-text" data-dropdown-menu-trigger>
+							Element
+						</div>
+						<div class="mob-menu__submenu-wrapper" data-dropdown>
+							<div class="mob-menu__submenu">
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mob-menu__menu-element" data-dropdown-wrapper>
+						<div class="mob-menu__menu-element-text" data-dropdown-menu-trigger>
+							Element
+						</div>
+						<div class="mob-menu__submenu-wrapper" data-dropdown>
+							<div class="mob-menu__submenu">
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mob-menu__menu-element" data-dropdown-wrapper>
+						<div class="mob-menu__menu-element-text" data-dropdown-menu-trigger>
+							Element
+						</div>
+						<div class="mob-menu__submenu-wrapper" data-dropdown>
+							<div class="mob-menu__submenu">
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+								<div class="mob-menu__submenu-element">
+									Sub Element
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>	
 		</div>
 	</header>
 <section>
@@ -131,8 +265,8 @@
 				</div>
 				<div class="po--r z--front">
 					<div class="background--cover background--dark-green z--mid background--opacity-0-7"></div>
-					<div class="po--r z--front p--y-15 p--x-75 md-p--x-25">
-						<div class="text--white text--500 text--M">
+					<div class="po--r z--front p--y-25 p--x-75 md-p--x-25">
+						<div class="text--white text--500 text--M m--b-15">
 							Позиция БИОМА
 						</div>
 						<div class="text--white">
@@ -162,7 +296,7 @@
 </section>
 <section>
 	<div class="container">
-		<h2 class="m--y-25 text--dark-green text--XL text--uppercase text--500">НАПРАВЛЕНИЯ</h2>
+		<h2 class="m--y-25 text--dark-green text--XL text--uppercase text--500 m--l-10 m--r-10">НАПРАВЛЕНИЯ</h2>
 		<div class="fx fx-wr--w">
 			<div class="fx-el--50 md-fx-el--100 p--10">
 				<div class="card card-hover--background-tint card--background-tint card--rounded po--r p--25 h--300 fx fx-ai--e">
@@ -205,7 +339,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="fx-el--25 md-fx-el--50 xsm-fx-el--100 p--10">
+			<div class="fx-el--25 lg-fx-el--50 xsm-fx-el--100 p--10">
 				<div class="card card-hover--background-tint card--rounded po--r p--25 h--300 fx fx-ai--e">
 					<div class="background--cover background--dark-green card--background z--mid ibg ibg--cover">
 						<img src="assets/img/banner.jpg" alt="">
@@ -219,7 +353,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="fx-el--25 md-fx-el--50 xsm-fx-el--100 p--10">
+			<div class="fx-el--25 lg-fx-el--50 xsm-fx-el--100 p--10">
 				<div class="card card-hover--background-tint card--rounded po--r p--25 h--300 fx fx-ai--e">
 					<div class="background--cover background--dark-green card--background z--mid ibg ibg--cover">
 						<img src="assets/img/banner.jpg" alt="">
@@ -233,7 +367,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="fx-el--50 md-fx-el--100 p--10">
+			<div class="fx-el--50 lg-fx-el--100 p--10">
 				<div class="card card-hover--background-tint card--rounded po--r h--300">
 					<div class="background--cover background--dark-green card--background z--mid ibg ibg--cover">
 						<img src="assets/img/banner.jpg" alt="">
@@ -254,7 +388,7 @@
 </section>
 <section>
 	<div class="container">
-		<h2 class="m--y-25 text--dark-green text--XL text--uppercase text--500">Проектные сайты биома</h2>
+		<h2 class="m--y-25 text--dark-green text--XL text--uppercase text--500 m--l-10 m--r-10">Проектные сайты биома</h2>
 		<div class="fx fx-wr--w">
 			<div class="fx-el--100 p--10">
 				<div class="card card--rounded po--r p--25 fx fx-ai--e">
@@ -338,7 +472,7 @@
 </section>
 <section>
 	<div class="container po--r">
-		<h2 class="p--t-25 m--b-25 text--dark-green text--XL text--uppercase text--500 p--r-75">СОБЫТИЯ</h2>
+		<h2 class="p--t-25 m--b-25 text--dark-green text--XL text--uppercase text--500 p--r-75  m--l-10 m--r-10">СОБЫТИЯ</h2>
 		<div class="">
 			<div class="fx fx-wr--w">
 				<div class="fx-el--100 p--10">

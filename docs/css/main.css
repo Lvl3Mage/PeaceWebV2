@@ -4454,12 +4454,28 @@ h2 {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 992px) {
+  .header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    height: 90px;
+  }
+}
 .header__menu {
   padding: 15px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background: linear-gradient(90deg, white 85%, rgba(255, 255, 255, 0) 100%);
+}
+@media (max-width: 992px) {
+  .header__menu {
+    justify-content: space-between;
+    height: 100%;
+  }
 }
 .header__logo {
   flex: 0 0 200px;
@@ -4469,10 +4485,30 @@ h2 {
   width: 100%;
   height: auto;
 }
+@media (max-width: 992px) {
+  .header__logo {
+    flex: 0 0 auto;
+    height: 100%;
+  }
+  .header__logo img {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .header__logo {
+    height: 80%;
+  }
+}
 .header__navbar {
   margin: 0 20px;
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 992px) {
+  .header__desktop-element {
+    display: none !important;
+  }
 }
 .header__nav-element {
   margin: 0 15px;
@@ -4483,6 +4519,26 @@ h2 {
 }
 .header__languages {
   display: flex;
+}
+@media (max-width: 992px) {
+  .header__languages {
+    transform: translateY(-100px);
+    border-right: 2px solid #D9D9D9;
+    padding-right: 10px;
+    margin-left: 50px;
+    font-size: 18px;
+    transition: all 0.6s;
+  }
+  .header__languages.active {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 576px) {
+  .header__languages {
+    font-size: 14px;
+    margin-left: 0;
+    padding-right: 5px;
+  }
 }
 .header__language {
   margin: 0 5px;
@@ -4510,6 +4566,129 @@ h2 {
 .header__decor img {
   width: 100%;
   height: auto;
+}
+.header__burger-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .header__burger-wrapper {
+    display: none;
+  }
+}
+
+.burger {
+  cursor: pointer;
+  align-self: center;
+  width: 26px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger.active :nth-child(1) {
+  transform: translateY(7px) rotate(135deg);
+}
+.burger.active :nth-child(2) {
+  transform: scaleX(0);
+  opacity: 0.2;
+}
+.burger.active :nth-child(3) {
+  transform: translateY(-7px) rotate(-135deg);
+}
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background: #1A8400;
+  transition: all 0.4s;
+}
+
+.mob-menu.active .mob-menu__content {
+  transform: translateY(-100%);
+}
+.mob-menu__content {
+  z-index: 200;
+  transition: all 0.4s ease-in-out;
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 90px);
+  left: 0;
+  top: 100vh;
+  background-color: #FFF;
+  padding: 0 5px;
+  border-top: 2px solid #1A8400;
+}
+.mob-menu__menu {
+  padding: 25px 0;
+  font-weight: 600;
+  font-size: 18px;
+  list-style-type: none;
+}
+.mob-menu__menu > li {
+  margin-bottom: 10px;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+}
+.mob-menu__menu > li span:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-bottom: 3px solid #1A8400;
+  border-right: 3px solid #1A8400;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  margin: auto;
+  transition: all 0.6s;
+}
+.mob-menu__menu > li > a, .mob-menu__menu > li > span {
+  position: relative;
+  line-height: 1.5em;
+  border: 2px solid rgba(26,132,0,0.33333);
+  border-radius: 5px;
+  padding: 15px 30px;
+  display: block;
+  background: #fff;
+  color: #000;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.mob-menu__menu > li.active span {
+  background-color: #1A8400;
+  border-color: #1A8400;
+  color: #FFF;
+}
+.mob-menu__menu > li.active span:before {
+  transform: rotate(225deg);
+  border-color: #fff;
+}
+.mob-menu__menu > li > ul {
+  padding: 0;
+  z-index: -10;
+  position: absolute;
+  width: 100%;
+  list-style-type: none;
+}
+.mob-menu__menu > li > ul > li {
+  background: #E8FFC0;
+  padding: 15px 25px;
+  padding-left: 35px;
+  color: #1A8400;
+  font-weight: 400;
+  border-bottom: 2px solid #1A8400;
+  cursor: pointer;
+  transition: all 0.4s;
+  width: 100%;
+}
+.mob-menu__menu > li > ul > li:hover {
+  color: #1A8400;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .card {
@@ -4652,6 +4831,10 @@ a.btn {
 
 .hidden {
   display: none;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .banner-slider__slide {
