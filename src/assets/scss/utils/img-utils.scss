@@ -10,8 +10,19 @@
 	&--link{
 		line-height: 0;
 	}
+	&--lh0{
+		line-height: 0;
+	}
 	&--min-size-0{
 		min-width: 0;
 		min-height: 0;
+	}
+	&--fl{
+		&-r{
+			float: right;
+		}
+		&-l{
+			float: left;
+		}
 	}
 }

@@ -160,6 +160,9 @@ a.btn{
 		&:active{
 			filter: brightness(0.6);
 		}	
+	}
+	&--border{
+		border: 2px solid $darkGreen;
 	}	
 }
 .hidden{
@@ -167,4 +170,10 @@ a.btn{
 }
 body.lock{
 	overflow: hidden;
+}
+
+.left-highlight{
+	&--dark-green{
+		border-left: 6px solid $darkGreen;
+	}
 }

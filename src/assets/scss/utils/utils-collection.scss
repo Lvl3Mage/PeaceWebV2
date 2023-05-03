@@ -17,6 +17,9 @@
 .h{
 	@import './height-util-preset';
 }
+.w{
+	@import './width-util-preset';
+}
 .mh{
 	@import './min-height-util-preset'
 }
@@ -40,6 +43,9 @@
 		}
 		&-h{
 			@import './height-util-preset';
+		}
+		&-w{
+			@import './width-util-preset';
 		}
 		&-mh{
 			@import './min-height-util-preset'
@@ -68,6 +74,9 @@
 		&-h{
 			@import './height-util-preset';
 		}
+		&-w{
+			@import './width-util-preset';
+		}
 		&-mh{
 			@import './min-height-util-preset'
 		}
@@ -93,6 +102,9 @@
 		}
 		&-h{
 			@import './height-util-preset';
+		}
+		&-w{
+			@import './width-util-preset';
 		}
 		&-mh{
 			@import './min-height-util-preset'
@@ -120,6 +132,9 @@
 		&-h{
 			@import './height-util-preset';
 		}
+		&-w{
+			@import './width-util-preset';
+		}
 		&-mh{
 			@import './min-height-util-preset'
 		}
@@ -145,6 +160,9 @@
 		}
 		&-h{
 			@import './height-util-preset';
+		}
+		&-w{
+			@import './width-util-preset';
 		}
 		&-mh{
 			@import './min-height-util-preset'
