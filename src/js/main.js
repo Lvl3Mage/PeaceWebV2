@@ -156,18 +156,25 @@ $(document).on( "click", ".mob-menu__menu>li>span", function(){
 	let container = $(this).closest('.mob-menu__menu');
 	let dropdowns = container.children('li');
 	let curDropdown = $(this).closest(".mob-menu__menu>li");
+	let curDropdownState = curDropdown.hasClass('active');
 	dropdowns.removeClass("active");
-	curDropdown.addClass("active");
+	curDropdown.toggleClass("active", !curDropdownState);
+
+
+
+	//dropdowns = container.children('li');
 	for(let dropdown of dropdowns){
-		if(dropdown != curDropdown[0]){
+		if(!$(dropdown).hasClass("active")){
 			let baseElem = $(dropdown).children("span, a");
-			console.log(baseElem.css('height'))
+			//console.log(baseElem.css('height'))
 			$(dropdown).animate({
 				height: baseElem.css('height'),
 			}, 400);	
 		}
 	}
-	curDropdown.animate({
-		height: $(this).outerHeight() + curDropdown.children("ul").outerHeight() + "px",
-	}, 400);
+	if(curDropdown.hasClass("active")){
+		curDropdown.animate({
+			height: $(this).outerHeight() + curDropdown.children("ul").outerHeight() + "px",
+		}, 400);
+	}
 })
