@@ -1,6 +1,8 @@
 .banner-slider {
 	&__slide {
-		height: 80vh;
+		//height: 80vh;
+		height: 600px;
+		max-height: 80vh;
 		position: relative;
 	}
 	&__slide-background {
@@ -13,9 +15,20 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
-		@include fSize($tabletWidth, $smPhoneWidth, $fontSizeXXL_desktop, $fontSizeXL_mobile);
-		width: 70%;
+		//@include fSize($tabletWidth, $smPhoneWidth, $fontSizeXXL_desktop, $fontSizeXL_mobile);
+		//width: 70%;
 		margin: auto;
+		@media screen and (max-width: 768px) {
+			justify-content: center;
+		}
+		span {
+			margin-left: 12%;
+			width: 500px;
+			max-width: 60%;
+			@media screen and (max-width: 768px) {
+				margin-left: 0;
+			}
+		}
 	}
 }
 .card-decor-gradient{

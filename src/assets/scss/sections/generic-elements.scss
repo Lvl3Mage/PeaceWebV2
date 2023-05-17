@@ -108,6 +108,9 @@ a.btn{
 	}
 	&--M{
 		padding: 15px 35px;
+		&--narrow{
+			padding: 6px 40px;
+		}
 	}
 	&--dark-green{
 		transition: all 0.3s;
@@ -176,4 +179,16 @@ body.lock{
 	&--dark-green{
 		border-left: 6px solid $darkGreen;
 	}
+}
+.main-title {
+		margin: 10px 18px;
+}
+.text-15px {
+	font-size: 15px;
+}
+.text-20px {
+	font-size: 20px;
+}
+.text-18px {
+	font-size: 18px;
 }

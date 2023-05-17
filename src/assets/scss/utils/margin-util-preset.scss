@@ -113,6 +113,12 @@
 	&--b-75{
 		margin-bottom: 75px;
 	}
+	&--b-85{
+		margin-bottom: 85px;
+	}
+	&--b-100{
+		margin-bottom: 100px;
+	}
 	&--t-5{
 		margin-top: 5px;
 	}
@@ -131,8 +137,26 @@
 	&--t-45{
 		margin-top: 45px;
 	}
+	&--t-50{
+		margin-top: 50px;
+	}
+	&--t-55{
+		margin-top: 55px;
+	}
+	&--t-60{
+		margin-top: 60px;
+	}
+	&--t-65{
+		margin-top: 65px;
+	}
+	&--t-70{
+		margin-top: 70px;
+	}
 	&--t-75{
 		margin-top: 75px;
+	}
+	&--t-100{
+		margin-top: 100px;
 	}
 	&--x-15{
 		margin-left: 15px;
@@ -173,5 +197,9 @@
 	&--y-75{
 		margin-top: 75px;
 		margin-bottom: 75px;
+	}
+	&--y-100{
+		margin-top: 100px;
+		margin-bottom: 100px;
 	}
 }
