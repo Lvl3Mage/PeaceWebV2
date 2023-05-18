@@ -6,6 +6,11 @@
 	&--shadow {
 		box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
 	}
+	&-border {
+		&--dark-green{
+			border: 1px solid #1A8400;
+		}
+	}
 	&-hover {
 		&--background-tint{
 
@@ -20,8 +25,26 @@
 				
 			}
 		}
+		&--glow{
+			.card--glow-element{
+				transition: all 0.3s;
+			}
+			&:hover{
+				overflow: visible;
+			}
+			&--light-green{
+				&:hover{
+
+					&.card--glow-element, .card--glow-element{
+						box-shadow: 0px 4px 20px #86D401;
+					}	
+				}
+				
+			}
+			
+		}
 		&--background-recolor{
-			.card--background{
+			&.card--background, .card--background, &.card--force-background-opposite, .card--force-background-opposite{
 				transition: all 0.3s;
 				*{
 					transition: all 0.3s;
@@ -29,11 +52,18 @@
 			}
 			&--dark-green{
 				&:hover{
-					.card--background{
+					&.card--background, .card--background{
 						background-color: $darkGreen;
 						*:not(.card--mantain-text-color){
 
 							color: $white;
+						}
+					}
+					&.card--force-background-opposite, .card--force-background-opposite{
+						background-color: $white !important;
+						&:not(.card--mantain-text-color){
+
+							color: $darkGreen;
 						}
 					}
 					
@@ -98,6 +128,10 @@ a.btn{
 	border-radius: 5px;
 	cursor: pointer;
 	text-align: center;
+	border: none;
+	&--full{
+		display: block !important;
+	}
 	&--rounded{
 		&-5{
 			border-radius: 5px;
@@ -106,10 +140,21 @@ a.btn{
 			border-radius: 10px;
 		}
 	}
+	&--S{
+		padding: 10px 20px;
+	}
 	&--M{
 		padding: 15px 35px;
 		&--narrow{
 			padding: 6px 40px;
+		}
+	}
+	&--glow{
+		transition: all 0.3s;
+		&-light-green{
+			&:hover{
+				filter: drop-shadow(0px 4px 20px $lightGreen);
+			}
 		}
 	}
 	&--dark-green{
@@ -125,9 +170,15 @@ a.btn{
 			transition: all 0.3s;
 			border: 2px solid $darkGreen;
 			background: $white;
+			*{
+				transition: all 0.3s;
+			}
 			&:hover{
 				background: darken($darkGreen, 5);
 				color: $white;
+				*{
+					color: $white;
+				}
 			}
 			&:active{
 				filter: brightness(0.6);
@@ -149,7 +200,7 @@ a.btn{
 	color: $darkGreen;
 	border-radius: 5px;
 	text-align: center;
-	padding: 15px 35px;
+	padding: 15px 15px;
 	transition: all 0.3s;
 	&.active{
 		background: $darkGreen;
@@ -192,3 +243,134 @@ body.lock{
 .text-18px {
 	font-size: 18px;
 }
+
+.filter{
+	&-datepicker{
+		position: relative;
+		width: 12em;
+		cursor: pointer;
+		&__input{
+			width: 100%;
+
+			border: 1px solid #B9B9B9;
+			border-radius: 4px;
+			padding: 5px 10px;
+			color: #6B6B6B;
+			cursor: pointer;
+			padding-right: 2em;
+			padding-left: 1em;
+		}
+		&__icon{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			pointer-events: none;
+			height: 100%;
+			z-index: 1;
+		}
+	}
+	&-dropdown{
+	}
+	&-search{
+		background: $white;
+		position: relative;
+		max-width: 25em;
+		input{
+			border: 1px solid $darkGreen;
+			border-radius: 4px;
+			padding: 7px 12px;
+			background: transparent;
+			width: 100%;
+			&:focus{
+				outline: 1px solid #0004;
+			}
+			padding-right: 2.2em;
+		}
+		&__icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			pointer-events: none;
+			height: 100%;
+			z-index: 1;
+		}
+	}
+	&-tag{
+		background: $white;
+		color: $darkGreen;
+		border-radius: 5px;
+		text-align: center;
+		padding: 7px 15px;
+		cursor: pointer;
+
+		border: 1px solid $darkGreen;
+		transition: all 0.3s;
+		&.active{
+			background: $darkGreen;
+			color: $white;
+		}
+		margin: 5px;
+	}
+}
+.line-separator{
+	&--gray{
+		border-bottom: 2px solid #ACACAC;
+	}
+}
+.info-preview{
+	&__overlay{
+		opacity: 0;
+		transition: all 0.3s;
+		&:hover{
+			opacity: 0.3;
+		}
+		filter: blur(5px);
+		background: linear-gradient(90deg, $pastelGreen 1.86%, $darkGreen 100%);
+		
+	}
+	&--shadow{
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	}
+}
+
+.poem-card {
+	transition: all 0.3s;
+	&.active{
+		background: $pastelGreen;
+		.poem-hidden{
+			display: block;
+		}
+	}
+}
+.poem-layout {
+	column-count: 3;
+	@include breakpoint-down($smTabletWidth){
+		column-count: 2;
+	}
+	@include breakpoint-down($smPhoneWidth){
+		column-count: 1;
+	}
+}
+.poem-preview {
+	:first-child{
+		margin-top: 0;
+	}
+}
+.poem-hidden {
+	display: none;
+}
+[data-toggle-state="false"]{
+	[data-class-toggler="false"]{display: none !important;}
+}
+[data-toggle-state="true"]{
+	[data-class-toggler="true"]{display: none !important;}
+}
+

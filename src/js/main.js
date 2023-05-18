@@ -1,4 +1,5 @@
-var $ = require( "jquery" );
+
+var $ = require('jquery');
 //IBG  // Also include in SCSS
 import ibg from './libs/ibg.js'
 $(document).ready(function(){
@@ -11,6 +12,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+
 	$('.banner-slider').slick({
 		arrows: true,
 		dots: true,
@@ -101,6 +103,30 @@ $(document).ready(function(){
 			}
 		],
 	});
+
+	$.datepicker.regional.ru = {
+		closeText: "Закрыть",
+		prevText: "Пред",
+		nextText: "След",
+		currentText: "Сегодня",
+		monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+		"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+		monthNamesShort: [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+		"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+		dayNames: [ "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" ],
+		dayNamesShort: [ "вск", "пнд", "втр", "срд", "чтв", "птн", "сбт" ],
+		dayNamesMin: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+		weekHeader: "Нед",
+		dateFormat: "dd.mm.yy",
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: "" };
+	$.datepicker.setDefaults($.datepicker.regional.ru );
+	// $.selectmenu.setDefaults($.datepicker.regional.ru );
+	
+	$( ".filter-datepicker__input" ).datepicker();
+	$( ".filter-dropdown select" ).selectmenu();
 });
 
 
@@ -178,3 +204,25 @@ $(document).on( "click", ".mob-menu__menu>li>span", function(){
 		}, 400);
 	}
 })
+
+//Class toggler
+$(document).on( "click", "[data-class-toggler]", function(){
+	//gather state
+	let classToggle = $(this).closest("[data-class-toggle]");
+	let target = $(classToggle.data("target-selector"));
+	let classToToggle = classToggle.data('classname');
+
+	let classTogglerTarget = $(this).data('class-toggler');
+
+
+	//toggling class
+	if(classTogglerTarget === ''){//if target state not set - toggles class
+		target.toggleClass(classToToggle);
+	}
+	else{//if target state is set - switches class to desired state
+		target.toggleClass(classToToggle, classTogglerTarget);
+	}
+
+	//updating state
+	classToggle.attr('data-toggle-state', target.hasClass(classToToggle));
+});

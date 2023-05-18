@@ -1,0 +1,231 @@
+
+//DATE PICKER
+.ui-datepicker {
+	z-index: 10 !important;
+	transform: translateY(-2.4em);
+	background-color: #fff;
+	box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	width: auto;
+	thead{
+		color: rgba(0, 0, 0, 0.38);
+		font-weight: normal;
+		font-size: 10px;
+	}
+}
+.ui-datepicker-prev{
+	&:before,&:after{
+		display: block;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 3px;
+		width: 10px;
+		margin: auto;
+		background: #999;
+		border-radius: 2px;
+		position: absolute;
+		transform-origin: calc(0% + 1px) 50%;
+
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+
+	&:after{
+		transform: rotate(-45deg);
+	}
+	*{
+		display: none;
+	}
+}
+.ui-datepicker-next{
+	&:before,&:after{
+		display: block;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 3px;
+		width: 10px;
+		margin: auto;
+		background: #999;
+		border-radius: 2px;
+		position: absolute;
+		transform-origin: calc(100% - 1px) 50%;
+
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+
+	&:after{
+		transform: rotate(-45deg);
+	}
+	*{
+		display: none;
+	}
+}
+.ui-datepicker-header {
+	color: #000;
+	// background-color: #616eff;
+}
+
+.ui-datepicker-title {
+	// color: white;
+}
+
+.ui-widget-content .ui-state-default {
+	padding: 7px 10px;
+	border: 0px;
+	text-align: center;
+	// background: #fff;
+	font-weight: normal;
+	position: relative;
+	color: #000;
+	transition: all 0.3s;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: -1;
+		transform: scale(0);
+		transition: all 0.3s;
+		height: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		background: $darkGreen;	
+	}
+}
+
+.ui-widget-content .ui-state-default:hover {
+	&:not(.ui-state-active){
+		border: 0px;
+		color: #fff;
+		&:before{
+			transform: scale(1);
+		}
+	}
+	
+}
+
+.ui-widget-content .ui-state-active {
+	border: 0px;
+	// background: #616eff;
+	position: relative;
+	&:before{
+		transform: scale(1.2);
+	}
+	color: #fff;
+}
+
+//SELECT MENU
+.ui-selectmenu-button{
+	position: relative;
+	&:before{
+		position: absolute;
+		z-index: 10;
+		right: 0.5em;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		content: '';
+		width: 0; 
+		height: 0; 
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		
+		border-top: 6px solid rgba(0, 0, 0, 0.54);
+		pointer-events: none;
+	}
+
+	color: inherit;
+	padding: 0 1em 0 0;
+	margin: 0;
+
+
+	font-size: 14px;
+	font-weight: 400;
+	cursor: pointer;
+	border: 1px solid #B9B9B9;
+	background-color: $white;
+	width: 12em;
+	border-radius: 3px;
+	padding: 7px 12px;
+	transition: all 0.3s;
+	&[aria-expanded="true"]{
+		background: $pastelGreen;
+		color: #000;
+		border: 1px solid transparent;
+		//color: $darkGreen;
+	}
+}
+.ui-selectmenu-menu{
+	border-top: 2px solid $darkGreen;
+	background: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0 0 4px 4px;
+	.ui-menu-item{
+		&.ui-state-disabled{
+
+			.ui-menu-item-wrapper{
+				color: #555 !important;
+
+				// color: $darkGreen;
+				//background: $pastelGreen;
+				margin: 0;
+			}
+		}
+		&:not(.ui-state-disabled){
+			.ui-menu-item-wrapper:hover, .ui-state-active{
+				color: #000;
+				&:before, &:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					background: $pastelGreen;
+					transform: translateX(0) scaleY(1);
+				} color: $darkGreen;
+
+				
+				margin: 0;
+			}
+		}
+		.ui-menu-item-wrapper{
+			padding: 15px;
+			font-size: 14px;
+			font-weight: 400;
+			position: relative;
+			overflow: hidden;
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background: $pastelGreen;
+				
+				z-index: -1;
+				transition: all 0.3s;
+				border-radius: 5px;
+			}
+			&:before{
+				transform: translateX(-100%) scaleY(0);
+			}
+			&:after{
+				transform: translateX(100%) scaleY(0);
+			}
+		} 
+
+	}
+}
