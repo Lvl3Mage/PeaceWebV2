@@ -1,3 +1,5 @@
+
+require('webpack-jquery-ui');
 import $ from "jquery";
 // JS
 import 'slick-carousel'

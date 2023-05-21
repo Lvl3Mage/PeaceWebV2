@@ -63,6 +63,9 @@
 	&--uppercase{
 		text-transform: uppercase;
 	}
+	&--left{
+		text-align: left;
+	}
 	&--center{
 		text-align: center;
 	}
@@ -77,6 +80,9 @@
 	// }
 	&--italic{
 		font-style: italic;
+	}
+	&--black{
+		color: $black;
 	}
 	&--white{
 		color: $white;

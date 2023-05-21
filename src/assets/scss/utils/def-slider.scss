@@ -36,6 +36,18 @@
 	// 		display: none !important;
 	// 	}
 	// }
+	&--full-h{
+		//height: 100%;
+		.slick-track{height: 100%;}
+		.slick-list{height: 100%;}
+		.slick-slide{
+			height: 100%;
+			&>div{
+				height: 100%;
+			}
+		}
+
+	}
 	&.arrows{
 		&--overlay{
 			
