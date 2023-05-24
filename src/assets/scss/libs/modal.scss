@@ -80,25 +80,44 @@
 		justify-self: end;
 		cursor: pointer;
 		height: 20px;
-		width: 20px;
-		display: flex;
-		justify-content: center;
+		// width: 20px;
+		flex: 0 0 20px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: $darkGreen;
+			z-index: -1;
+		}
 	}
 	&__cross-line {
-		height: 100%;
+		position: absolute;
+		width: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		height: 50%;
 		box-sizing: border-box;
-		border: 1px solid $highlightColor;
-		background: $highlightColor;
+		border: 1px solid $white;
+		background: $white;
 		border-radius: 2px;
 		transform-origin: 50% 50%;
 		&--1 {
-			transform: translateX(1px) rotate(-135deg);
+			transform: rotate(-135deg);
 		}
 		&--2 {
-			transform: translateX(-1px) rotate(135deg);
+			transform: rotate(135deg);
 		}
 	}
 	&__content-wrapper{
-
+		.large-text{
+			overflow: auto;
+			max-height: min(70vh, 400px);
+		}
 	}
 }
