@@ -215,6 +215,10 @@ a.btn{
 			filter: brightness(0.6);
 		}	
 	}
+	&--narrow {
+		padding-top: 7px !important;
+		padding-bottom: 5px !important;
+	}
 	&--border{
 		border: 2px solid $darkGreen;
 	}	
@@ -380,3 +384,10 @@ body.lock{
 	[data-class-toggler="true"]{display: none !important;}
 }
 
+.ui-selectmenu-menu {
+	max-height: 300px;
+	overflow: auto;
+	&>ul {
+		height: 100%;
+	}
+}
