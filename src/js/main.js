@@ -7,8 +7,8 @@ $(document).ready(function(){
 })
 
 //MODAL  // Also include in SCSS
-// import './libs/modal.js';
-// import {CloseModal, OpenModal} from './libs/modal.js';
+import './libs/modal.js';
+import {CloseModal, OpenModal} from './libs/modal.js';
 
 
 $(document).ready(function(){
@@ -28,6 +28,14 @@ $(document).ready(function(){
 		// fade: true,
 		// cssEase: 'cssEase'
 	});
+	$('.def-slider-1-dots').slick({
+		arrows: true,
+		infinite: true,
+		speed: 500,
+		dots: true,
+		// fade: true,
+		// cssEase: 'cssEase'
+	});
 	$('.def-slider-2').slick({
 		arrows: true,
 		dots: true,
@@ -42,18 +50,52 @@ $(document).ready(function(){
 		infinite: true,
 		speed: 500,
 		adaptiveHeight: true,
-		slidesToShow: 5,
+		slidesToShow: 3,
 		responsive: [
 			{
 				breakpoint: 1200,
 				settings: {
-					slidesToShow: 4,
+					slidesToShow: 3,
 				}
 			},
 			{
 				breakpoint: 992,
 				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		],
+	});
+	$('.def-slider-3-dots').slick({
+		arrows: true,
+		dots: true,
+		infinite: true,
+		speed: 500,
+		adaptiveHeight: true,
+		slidesToShow: 3,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
 					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
 				}
 			},
 			{
@@ -72,6 +114,40 @@ $(document).ready(function(){
 	});
 	$('.def-slider-4').slick({
 		arrows: true,
+		infinite: true,
+		speed: 500,
+		adaptiveHeight: true,
+		slidesToShow: 4,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		],
+	});
+	$('.def-slider-4-dots').slick({
+		arrows: true,
+		dots: true,
 		infinite: true,
 		speed: 500,
 		adaptiveHeight: true,
