@@ -215,6 +215,10 @@ a.btn{
 			filter: brightness(0.6);
 		}	
 	}
+	&--narrow {
+		padding-top: 7px !important;
+		padding-bottom: 5px !important;
+	}
 	&--border{
 		border: 2px solid $darkGreen;
 	}	
@@ -476,4 +480,11 @@ body.lock{
 	padding: 20px;
 	border-radius: 10px;
 	margin: 20px 0;
+}
+.ui-selectmenu-menu {
+	max-height: 300px;
+	overflow: auto;
+	&>ul {
+		height: 100%;
+	}
 }
