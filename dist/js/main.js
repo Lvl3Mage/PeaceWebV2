@@ -23,6 +23,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/scss/main.scss */ "./src/assets/scss/main.scss");
+__webpack_require__(/*! webpack-jquery-ui */ "./node_modules/webpack-jquery-ui/index.js");
+
  // JS
 
 
@@ -61,6 +63,84 @@ function ibg() {
 
 /***/ }),
 
+/***/ "./src/js/libs/modal.js":
+/*!******************************!*\
+  !*** ./src/js/libs/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CloseModal": () => (/* binding */ CloseModal),
+/* harmony export */   "OpenModal": () => (/* binding */ OpenModal)
+/* harmony export */ });
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+$(document).on('click', '[data-modal-trigger]', function (event) {
+  $("body").css("overflow", "hidden");
+  var modalID = $(this).data('modal-id');
+  var modal = $("#" + modalID + ".modal");
+  modal.addClass("modal-active");
+  var modalTitle = $(this).data('modal-title');
+
+  if (typeof modalTitle !== 'undefined') {
+    modal.find(".modal-title").html(modalTitle);
+  } // let modalFieldPresets= $(this).data('field-presets');
+  // if(modalFieldPresets){
+  // 	for (let i = 0; i < modalFieldPresets.length; i++) {
+  // 		modal.find(modalFieldPresets[i].childSelector).val(modalFieldPresets[i].value);
+  // 	}
+  // }
+
+});
+$(document).on('mousedown touchstart', '.modal-bg, .modal-cross', function (event) {
+  $("body").css("overflow", "visible");
+  var modal = $(this).closest(".modal");
+  modal.removeClass("modal-active");
+});
+$(document).on('mousedown touchstart', '.modal-window', function (event) {
+  event.stopPropagation();
+});
+function OpenModal(modalSelector) {
+  $("body").css("overflow", "hidden");
+  $(modalSelector).addClass("modal-active");
+}
+function CloseModal(modalSelector) {
+  // disables modal and frees body if no active modals remain
+  var modal = $(modalSelector).closest(".modal");
+  modal.removeClass("modal-active");
+
+  if ($('.modal-active').length == 0) {
+    $("body").css("overflow", "visible");
+  }
+}
+/*
+HTML
+
+<div class="def-modal modal modal-bg" id="contact-modal">
+	<div class="def-modal__outer-container container">
+		<div class="def-modal__inner-container def-modal__inner-container--75">
+			<div class="def-modal__wrapper modal-window">
+				<div class="def-modal__top m--t-15">
+					<div class="def-modal__title text--400 text--blue text--L m--l-25 sm-m--l-0">
+						<span class="modal-title">Modal Title</span>
+					</div>
+					<div class="def-modal__cross modal-cross">
+						<div class="def-modal__cross-line def-modal__cross-line--1"></div>
+						<div class="def-modal__cross-line def-modal__cross-line--2"></div>
+					</div>
+				</div>
+				<div class="def-modal__content-wrapper def-modal-class-name modal-content-wrapper">
+					Modal Content
+				</div>
+			</div>
+		</div>  
+	</div>
+</div>
+*/
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -69,6 +149,7 @@ function ibg() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_ibg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/ibg.js */ "./src/js/libs/ibg.js");
+/* harmony import */ var _libs_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/modal.js */ "./src/js/libs/modal.js");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); //IBG  // Also include in SCSS
 
 
@@ -76,8 +157,8 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 $(document).ready(function () {
   (0,_libs_ibg_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 }); //MODAL  // Also include in SCSS
-// import './libs/modal.js';
-// import {CloseModal, OpenModal} from './libs/modal.js';
+
+
 
 $(document).ready(function () {
   $('.banner-slider').slick({
@@ -95,6 +176,14 @@ $(document).ready(function () {
     // cssEase: 'cssEase'
 
   });
+  $('.def-slider-1-dots').slick({
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    dots: true // fade: true,
+    // cssEase: 'cssEase'
+
+  });
   $('.def-slider-2').slick({
     arrows: true,
     dots: true,
@@ -109,16 +198,45 @@ $(document).ready(function () {
     infinite: true,
     speed: 500,
     adaptiveHeight: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4
+        slidesToShow: 3
       }
     }, {
       breakpoint: 992,
       settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $('.def-slider-3-dots').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
         slidesToShow: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
       }
     }, {
       breakpoint: 768,
@@ -160,6 +278,56 @@ $(document).ready(function () {
       }
     }]
   });
+  $('.def-slider-4-dots').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    adaptiveHeight: true,
+    slidesToShow: 4,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $.datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "Пред",
+    nextText: "След",
+    currentText: "Сегодня",
+    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ""
+  };
+  $.datepicker.setDefaults($.datepicker.regional.ru); // $.selectmenu.setDefaults($.datepicker.regional.ru );
+
+  $(".filter-datepicker__input").datepicker();
+  $(".filter-dropdown select").selectmenu();
 });
 $(document).ready(function () {
   $('[data-simple-tab].active').each(function () {
@@ -213,22 +381,44 @@ $(document).on("click", ".mob-menu__menu>li>span", function () {
   let container = $(this).closest('.mob-menu__menu');
   let dropdowns = container.children('li');
   let curDropdown = $(this).closest(".mob-menu__menu>li");
+  let curDropdownState = curDropdown.hasClass('active');
   dropdowns.removeClass("active");
-  curDropdown.addClass("active");
+  curDropdown.toggleClass("active", !curDropdownState); //dropdowns = container.children('li');
 
   for (let dropdown of dropdowns) {
-    if (dropdown != curDropdown[0]) {
-      let baseElem = $(dropdown).children("span, a");
-      console.log(baseElem.css('height'));
+    if (!$(dropdown).hasClass("active")) {
+      let baseElem = $(dropdown).children("span, a"); //console.log(baseElem.css('height'))
+
       $(dropdown).animate({
         height: baseElem.css('height')
       }, 400);
     }
   }
 
-  curDropdown.animate({
-    height: $(this).outerHeight() + curDropdown.children("ul").outerHeight() + "px"
-  }, 400);
+  if (curDropdown.hasClass("active")) {
+    curDropdown.animate({
+      height: $(this).outerHeight() + curDropdown.children("ul").outerHeight() + "px"
+    }, 400);
+  }
+}); //Class toggler
+
+$(document).on("click", "[data-class-toggler]", function () {
+  //gather state
+  let classToggle = $(this).closest("[data-class-toggle]");
+  let target = $(classToggle.data("target-selector"));
+  let classToToggle = classToggle.data('classname');
+  let classTogglerTarget = $(this).data('class-toggler'); //toggling class
+
+  if (classTogglerTarget === '') {
+    //if target state not set - toggles class
+    target.toggleClass(classToToggle);
+  } else {
+    //if target state is set - switches class to desired state
+    target.toggleClass(classToToggle, classTogglerTarget);
+  } //updating state
+
+
+  classToggle.attr('data-toggle-state', target.hasClass(classToToggle));
 });
 
 /***/ }),
@@ -405,7 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_fortawesome_fontawesome-free_js_brands_js-node_modules_fortawesome_fonta-a595c5"], () => (__webpack_require__("./src/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_fortawesome_fontawesome-free_js_brands_js-node_modules_fortawesome_fonta-81003d"], () => (__webpack_require__("./src/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

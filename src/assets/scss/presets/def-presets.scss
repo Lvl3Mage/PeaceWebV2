@@ -20,6 +20,9 @@ a{
 h2{
 	border-bottom: 2px solid #ACACAC;
 	margin: unset;
+	&.remove-border{
+		border: none;
+	}
 }
 
 ul {

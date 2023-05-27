@@ -466,9 +466,14 @@ body.lock{
 		color: $darkGreen;
 		background: none;
 	}
+	em{
+		font-weight: 500;
+		font-style: unset;
+	}
 }
 .highlighted-block{
 	background: rgba($darkGreen, .15);
 	padding: 20px;
 	border-radius: 10px;
+	margin: 20px 0;
 }
