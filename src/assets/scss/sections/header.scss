@@ -57,6 +57,10 @@
 	&__nav-element {
 		margin: 0 10px;
 		list-style: none;
+		
+		text-align: center;
+		display: flex;
+		align-items: center;
 		&.current-menu-item{
 			color: $darkGreen;
 			font-weight: 700;

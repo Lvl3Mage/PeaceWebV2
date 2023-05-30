@@ -22,6 +22,9 @@ $(document).on('mousedown touchstart', '.modal-bg, .modal-cross', function(event
 	$("body").css("overflow", "visible");
 	var modal = $(this).closest(".modal");
 	modal.removeClass("modal-active");
+	$('iframe').each(function(){
+		$(this).attr('src', $(this).attr('src'));
+	});
 
 });
 $(document).on('mousedown touchstart', '.modal-window', function(event) {
@@ -37,6 +40,9 @@ export function CloseModal(modalSelector){ // disables modal and frees body if n
 	if($('.modal-active').length == 0){
 		$("body").css("overflow", "visible");	
 	}
+	$('iframe').each(function(){
+		$(this).attr('src', $(this).attr('src'));
+	});
 }
 
 
