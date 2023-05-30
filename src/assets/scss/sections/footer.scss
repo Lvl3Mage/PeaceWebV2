@@ -10,6 +10,7 @@
 		left: 0;
 		right: 0;
 		background-position: 50% 0;
+		opacity: 0.7;
 	}
 	&__content-wrapper {
 		// display: flex;
@@ -18,66 +19,46 @@
 		padding-top: 60px;
 		padding-bottom: 30px;
 	}
-	&__block {
-		// flex: 0 0 25%;
-		padding: 10px;
-		// @media screen and (max-width: $tabletWidth) {
-		// 	flex: 0 0 50%;
-		// }
-		// @media screen and (max-width: $phoneWidth) {
-		// 	flex: 0 0 auto;
-		// 	min-width: 300px;
-		// }
-	}
-	&__block-title {
-		margin-bottom: 25px;
-	}
-	&__block-element {
-		margin-bottom: 10px;
-		&--centered{
-			display: flex;
-			align-items: center;
-		}
-	}
-	&__block-gallery{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: center;
-		@media screen and (max-width: $phoneWidth) {
-			justify-content: center;
-		}
-	}
-	&__gallery-element{
-		--gap: 5px;
-		flex: 0 0 calc(30% - var(--gap) * 2);
-		margin: var(--gap);
-		aspect-ratio: 1/1;
-		transition: all 0.3s;
-		border-radius: 3px;
-		position: relative;
-		overflow: hidden;
-		cursor: pointer;
-		&:before{
-			content: '';
-			background: rgba(56,239,125,0);
-			transition: all 0.3s;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
-		&:hover{
-			&:before{
-				background: rgba(56,239,125,0.7);
+	&__contact-form{
+		input{
+			width: 100%;
+			border: 1px solid $darkGreen;
+			padding: 10px 20px;
+			border-radius: 5px;
+			color: $darkGreen;
+			&:focus{
+				outline: 1px solid $darkGreen;
 			}
-			
+			&::placeholder{
+				opacity: 0.5;
+				color:$darkGreen;
+			}
 		}
-		
+		textarea{
+			width: 100%;
+			border: 1px solid $darkGreen;
+			padding: 10px 20px;
+			border-radius: 5px;
+			color: $darkGreen;
+			resize:none;
+			&:focus{
+				outline: 1px solid $darkGreen;
+			}
+			&::placeholder{
+				opacity: 0.5;
+				color:$darkGreen;
+			}
+		}
+	}
+	&__contact-icon{
+		width: 1.5em;
+		height: 1.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	&__bottom-bar {
-		background-image: linear-gradient(180deg, #6FBC31 0%, #1A8400 100%) !important;
+		background-image: linear-gradient(180deg, #2A88F9 0%, #0E4F9F 100%) !important;
 	}
 	&__bottom-bar-text {
 		padding: 12px 0;
