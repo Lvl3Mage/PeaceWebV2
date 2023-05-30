@@ -8,10 +8,15 @@
 		background: #fff;
 		height: 90px;
 	}
+	&__divider{
+		width: 100%;
+		margin-top: 25px;
+		border-top: 1px solid $darkGreen;
+	}
 	&__menu {
 		padding: 20px 0;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: center;
 		background: linear-gradient(90deg, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%);
 		@include breakpoint-down($tabletWidth){
@@ -221,7 +226,7 @@
 			&>a, &>span{
 				position: relative;
 				line-height: 1.5em;
-				border: 2px solid #1A840055;
+				border: 2px solid rgba($darkGreen, 0.33);
 				border-radius: 5px;
 				// margin: 5px;
 				padding: 15px 30px;
@@ -265,7 +270,7 @@
 				width: 100%;
 				list-style-type: none;
 				&>li{
-					background: #E8FFC0;
+					background: $pastelGreen;
 					padding: 15px 25px;
 					padding-left: 35px;
 					color: $darkGreen;
