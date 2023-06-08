@@ -16,7 +16,7 @@ const PATHS = {
     fonts: 'assets/fonts/',
     images: 'assets/img/',
     js: 'js/',
-    css: 'css/',
+    css: 'css/climate/',
 }
 const PAGES_DIR = `${PATHS.src}/html`
 const PAGES = fs

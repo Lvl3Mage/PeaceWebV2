@@ -63,6 +63,91 @@ function ibg() {
 
 /***/ }),
 
+/***/ "./src/js/libs/modal.js":
+/*!******************************!*\
+  !*** ./src/js/libs/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CloseModal": () => (/* binding */ CloseModal),
+/* harmony export */   "OpenModal": () => (/* binding */ OpenModal)
+/* harmony export */ });
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+$(document).on('click', '[data-modal-trigger]', function (event) {
+  $("body").css("overflow", "hidden");
+  var modalID = $(this).data('modal-id');
+  var modal = $("#" + modalID + ".modal");
+  modal.addClass("modal-active");
+  var modalTitle = $(this).data('modal-title');
+
+  if (typeof modalTitle !== 'undefined') {
+    modal.find(".modal-title").html(modalTitle);
+  } // let modalFieldPresets= $(this).data('field-presets');
+  // if(modalFieldPresets){
+  // 	for (let i = 0; i < modalFieldPresets.length; i++) {
+  // 		modal.find(modalFieldPresets[i].childSelector).val(modalFieldPresets[i].value);
+  // 	}
+  // }
+
+});
+$(document).on('mousedown touchstart', '.modal-bg, .modal-cross', function (event) {
+  $("body").css("overflow", "visible");
+  var modal = $(this).closest(".modal");
+  modal.removeClass("modal-active");
+  $('iframe').each(function () {
+    $(this).attr('src', $(this).attr('src'));
+  });
+});
+$(document).on('mousedown touchstart', '.modal-window', function (event) {
+  event.stopPropagation();
+});
+function OpenModal(modalSelector) {
+  $("body").css("overflow", "hidden");
+  $(modalSelector).addClass("modal-active");
+}
+function CloseModal(modalSelector) {
+  // disables modal and frees body if no active modals remain
+  var modal = $(modalSelector).closest(".modal");
+  modal.removeClass("modal-active");
+
+  if ($('.modal-active').length == 0) {
+    $("body").css("overflow", "visible");
+  }
+
+  $('iframe').each(function () {
+    $(this).attr('src', $(this).attr('src'));
+  });
+}
+/*
+HTML
+
+<div class="def-modal modal modal-bg" id="contact-modal">
+	<div class="def-modal__outer-container container">
+		<div class="def-modal__inner-container def-modal__inner-container--75">
+			<div class="def-modal__wrapper modal-window">
+				<div class="def-modal__top m--t-15">
+					<div class="def-modal__title text--400 text--blue text--L m--l-25 sm-m--l-0">
+						<span class="modal-title">Modal Title</span>
+					</div>
+					<div class="def-modal__cross modal-cross">
+						<div class="def-modal__cross-line def-modal__cross-line--1"></div>
+						<div class="def-modal__cross-line def-modal__cross-line--2"></div>
+					</div>
+				</div>
+				<div class="def-modal__content-wrapper def-modal-class-name modal-content-wrapper">
+					Modal Content
+				</div>
+			</div>
+		</div>  
+	</div>
+</div>
+*/
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -71,6 +156,7 @@ function ibg() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_ibg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/ibg.js */ "./src/js/libs/ibg.js");
+/* harmony import */ var _libs_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/modal.js */ "./src/js/libs/modal.js");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); //IBG  // Also include in SCSS
 
 
@@ -78,8 +164,8 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 $(document).ready(function () {
   (0,_libs_ibg_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 }); //MODAL  // Also include in SCSS
-// import './libs/modal.js';
-// import {CloseModal, OpenModal} from './libs/modal.js';
+
+
 
 $(document).ready(function () {
   $('.banner-slider').slick({
@@ -97,6 +183,14 @@ $(document).ready(function () {
     // cssEase: 'cssEase'
 
   });
+  $('.def-slider-1-dots').slick({
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    dots: true // fade: true,
+    // cssEase: 'cssEase'
+
+  });
   $('.def-slider-2').slick({
     arrows: true,
     dots: true,
@@ -111,16 +205,45 @@ $(document).ready(function () {
     infinite: true,
     speed: 500,
     adaptiveHeight: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4
+        slidesToShow: 3
       }
     }, {
       breakpoint: 992,
       settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $('.def-slider-3-dots').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
         slidesToShow: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
       }
     }, {
       breakpoint: 768,
@@ -136,6 +259,35 @@ $(document).ready(function () {
   });
   $('.def-slider-4').slick({
     arrows: true,
+    infinite: true,
+    speed: 500,
+    adaptiveHeight: true,
+    slidesToShow: 4,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $('.def-slider-4-dots').slick({
+    arrows: true,
+    dots: true,
     infinite: true,
     speed: 500,
     adaptiveHeight: true,
@@ -209,7 +361,10 @@ function ActivateSimpleTab(simpleTab) {
 
 $(document).on("click", "[data-mob-menu-trigger]", function () {
   $("[data-mob-menu-trigger]").toggleClass("active");
+  let top = Math.max($(".header").offset().top - $(window).scrollTop(), 0) + $(".header").height();
   $(".mob-menu").toggleClass("active");
+  $(".mob-menu__content").css("height", "calc(100vh - " + top + "px)");
+  console.log(top);
   $(".header__languages").toggleClass("active");
   $('body').toggleClass('lock');
 }); // generic dropdown
