@@ -454,9 +454,9 @@ body.lock{
 	text-align: justify;
 	.alignleft{
 		float: left;
-   		margin: 10px;
+   		margin: 10px 0;
    		width: calc(50% - 1%) !important;
-   		margin: 20px 0;
+   		// margin: 20px 0;
    		margin-right: 2%;
    		@include breakpoint-down($tabletWidth){
    			margin-right: 0;
@@ -465,9 +465,9 @@ body.lock{
 	}
 	.alignright{
 		float: right;
-   		margin: 10px;
+   		margin: 10px 0;
    		width: calc(50% - 1%) !important;
-   		margin: 20px 0;
+   		// margin: 20px 0;
    		margin-left: 2%;
    		@include breakpoint-down($tabletWidth){
    			margin-right: 0;
