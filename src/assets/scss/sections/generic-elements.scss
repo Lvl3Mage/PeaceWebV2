@@ -451,25 +451,58 @@ body.lock{
 	}
 }
 .def-text{
+	.alignleft{
+		float: left;
+   		margin: 10px;
+	}
+	.alignright{
+		float: right;
+   		margin: 10px;
+	}
+	ul{
+		padding: unset;
+	}
 	h1,h2{
-		color: $darkGreen;
+		// color: $darkGreen;
 		text-transform: uppercase;
+		font-weight: 500;
 		@include fSize($tabletWidth, $phoneWidth, $fontSizeXL_desktop, $fontSizeXL_mobile);
 	}
 	h3{
-		color: $darkGreen;
+		// color: $darkGreen;
 		@include fSize($tabletWidth, $phoneWidth, $fontSizeM_desktop, $fontSizeM_mobile);
-		text-transform: uppercase;
+		font-weight: 500;
+		// text-transform: uppercase;
+	}
+	h4{
+		font-weight: 400;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeM_desktop, $fontSizeM_mobile);
+	}
+	h5{
+		font-weight: 400;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
+	}
+	figure{
+		width: 100% !important;
+		figcaption{
+			color: #474747;
+			opacity: 0.5;
+		}
 	}
 	a{
 
 		color: $darkGreen;
 		text-decoration: underline;
 	}
-	mark{
-		color: $darkGreen;
-		background: none;
+	iframe{
+		aspect-ratio: 16/9;
+		width: 100%;
+		height: auto;
 	}
+	// mark{
+	// 	color: $darkGreen;
+	// 	background: none;
+	// }
 	em{
 		font-weight: 500;
 		font-style: unset;
