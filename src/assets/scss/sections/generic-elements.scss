@@ -451,6 +451,7 @@ body.lock{
 	}
 }
 .def-text{
+	text-align: justify;
 	.alignleft{
 		float: left;
    		margin: 10px;
@@ -517,6 +518,7 @@ body.lock{
 		aspect-ratio: 16/9;
 		width: 100%;
 		height: auto;
+		margin: 15px 0;
 	}
 	// mark{
 	// 	color: $darkGreen;
