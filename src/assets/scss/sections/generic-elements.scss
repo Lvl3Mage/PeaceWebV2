@@ -454,16 +454,24 @@ body.lock{
 	.alignleft{
 		float: left;
    		margin: 10px;
-   		width: calc(50% - 15px);
+   		width: calc(50% - 15px) !important;
    		margin: 20px 0;
    		margin-right: 30px;
+   		@inclide breakpoint-down($tabletWidth){
+   			margin-right: 0;
+   			width: 100%;
+   		}
 	}
 	.alignright{
 		float: right;
    		margin: 10px;
-   		width: calc(50% - 15px);
+   		width: calc(50% - 15px) !important;
    		margin: 20px 0;
    		margin-left: 30px;
+   		@inclide breakpoint-down($tabletWidth){
+   			margin-right: 0;
+   			width: 100%;
+   		}
 	}
 	.aligncenter{
 		width: 100% !important;
