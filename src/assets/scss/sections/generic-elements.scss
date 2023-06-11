@@ -459,6 +459,13 @@ body.lock{
 		float: right;
    		margin: 10px;
 	}
+	.aligncenter{
+		width: 100%;
+		margin: 10px 0;
+		img{
+			width: 100%;
+		}
+	}
 	h1,h2{
 		// color: $darkGreen;
 		text-transform: uppercase;
