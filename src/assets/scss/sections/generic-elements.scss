@@ -459,7 +459,7 @@ body.lock{
    		margin-right: 2%;
    		@include breakpoint-down($tabletWidth){
    			margin-right: 0;
-   			width: 100%;
+   			width: 100% !important;
    		}
 	}
 	.alignright{
@@ -470,7 +470,7 @@ body.lock{
    		margin-left: 2%;
    		@include breakpoint-down($tabletWidth){
    			margin-right: 0;
-   			width: 100%;
+   			width: 100% !important;
    		}
 	}
 	.aligncenter{
