@@ -459,9 +459,6 @@ body.lock{
 		float: right;
    		margin: 10px;
 	}
-	ul{
-		padding: unset;
-	}
 	h1,h2{
 		// color: $darkGreen;
 		text-transform: uppercase;
@@ -483,7 +480,7 @@ body.lock{
 		@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
 	}
 	figure{
-		width: 100% !important;
+		// width: 100% !important;
 		figcaption{
 			color: #474747;
 			opacity: 0.5;
