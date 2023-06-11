@@ -454,10 +454,16 @@ body.lock{
 	.alignleft{
 		float: left;
    		margin: 10px;
+   		width: calc(50% - 15px);
+   		margin: 20px 0;
+   		margin-right: 30px;
 	}
 	.alignright{
 		float: right;
    		margin: 10px;
+   		width: calc(50% - 15px);
+   		margin: 20px 0;
+   		margin-left: 30px;
 	}
 	.aligncenter{
 		width: 100% !important;
@@ -491,6 +497,7 @@ body.lock{
 		figcaption{
 			color: #474747;
 			opacity: 0.5;
+			margin-top: 10px;
 		}
 	}
 	a{
