@@ -486,11 +486,13 @@ body.lock{
 		text-transform: uppercase;
 		font-weight: 500;
 		@include fSize($tabletWidth, $phoneWidth, $fontSizeXL_desktop, $fontSizeXL_mobile);
+		margin-bottom: 30px;
 	}
 	h3{
 		// color: $darkGreen;
 		@include fSize($tabletWidth, $phoneWidth, $fontSizeM_desktop, $fontSizeM_mobile);
 		font-weight: 500;
+		margin-bottom: 30px;
 		// text-transform: uppercase;
 	}
 	h4{
