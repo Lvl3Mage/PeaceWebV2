@@ -75,7 +75,7 @@ h2.remove-border {
   border: none;
 }
 
-ul {
+ul:not(.def-text > ul) {
   padding: 0px;
 }
 
@@ -426,7 +426,7 @@ ul {
 }
 .def-slider.arrows--top .slick-arrow {
   position: absolute;
-  bottom: calc(100% - 3px - 25px - 10px);
+  top: calc(0% + 25px);
   right: 5px;
   cursor: pointer;
   font-size: 0;
@@ -5119,6 +5119,9 @@ ul {
 .text--right {
   text-align: right;
 }
+.text--justify {
+  text-align: justify;
+}
 .text--text-font {
   font-family: Roboto, sans-serif;
 }
@@ -5866,10 +5869,45 @@ body.lock {
   opacity: 0.9;
 }
 
+.def-text {
+  text-align: justify;
+}
+.def-text .alignleft {
+  float: left;
+  margin: 10px 0;
+  width: 49% !important;
+  margin-right: 2%;
+}
+@media (max-width: 992px) {
+  .def-text .alignleft {
+    margin-right: 0;
+    width: 100% !important;
+  }
+}
+.def-text .alignright {
+  float: right;
+  margin: 10px 0;
+  width: 49% !important;
+  margin-left: 2%;
+}
+@media (max-width: 992px) {
+  .def-text .alignright {
+    margin-right: 0;
+    width: 100% !important;
+  }
+}
+.def-text .aligncenter {
+  width: 100% !important;
+  margin: 10px 0;
+}
+.def-text .aligncenter img {
+  width: 100% !important;
+}
 .def-text h1, .def-text h2 {
-  color: #1A8400;
   text-transform: uppercase;
+  font-weight: 500;
   font-size: calc((100vw - 576px)/(992 - 576)*(48 - 28) + 28px);
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 992px) {
   .def-text h1, .def-text h2 {
@@ -5882,9 +5920,9 @@ body.lock {
   }
 }
 .def-text h3 {
-  color: #1A8400;
   font-size: calc((100vw - 576px)/(992 - 576)*(30 - 22) + 22px);
-  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 992px) {
   .def-text h3 {
@@ -5896,17 +5934,51 @@ body.lock {
     font-size: 22px;
   }
 }
+.def-text h4 {
+  font-weight: 400;
+  font-size: calc((100vw - 576px)/(992 - 576)*(30 - 22) + 22px);
+}
+@media screen and (min-width: 992px) {
+  .def-text h4 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .def-text h4 {
+    font-size: 22px;
+  }
+}
+.def-text h5 {
+  font-weight: 400;
+  font-size: calc((100vw - 576px)/(992 - 576)*(20 - 16) + 16px);
+}
+@media screen and (min-width: 992px) {
+  .def-text h5 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .def-text h5 {
+    font-size: 16px;
+  }
+}
+.def-text figure figcaption {
+  color: #A3A3A3;
+  margin-top: 10px;
+}
 .def-text a {
   color: #1A8400;
   text-decoration: underline;
 }
-.def-text mark {
-  color: #1A8400;
-  background: none;
+.def-text iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
 }
-.def-text em {
-  font-weight: 500;
-  font-style: unset;
+
+.clear {
+  clear: both;
 }
 
 .highlighted-block {
@@ -5922,6 +5994,17 @@ body.lock {
 }
 .ui-selectmenu-menu > ul {
   height: 100%;
+}
+
+.playbutton {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.playbutton:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 5px black);
+  transition: all 0.5s;
 }
 
 .banner-slider__slide {
@@ -5946,13 +6029,13 @@ body.lock {
     justify-content: center;
   }
 }
-.banner-slider__slide-text span {
+.banner-slider__slide-text span, .banner-slider__slide-text h1 {
   margin-left: 12%;
   width: 500px;
   max-width: 60%;
 }
 @media screen and (max-width: 768px) {
-  .banner-slider__slide-text span {
+  .banner-slider__slide-text span, .banner-slider__slide-text h1 {
     margin-left: 0;
   }
 }

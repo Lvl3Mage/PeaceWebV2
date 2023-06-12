@@ -598,12 +598,12 @@
 		</div>
 	</div>
 </section>
-<section class="po--r m--t-75">
+<section class="po--r m--t-75 p--t-25">
 	<div class="background--cover ibg ibg--cover z--mid">
 		<img src="assets/img/leaf.jpg" alt="">
 	</div>
 	<div class="container po--r z--front">
-		<h2 class="p--t-50 m--b-25 text--white text--XL text--uppercase text--500 p--r-75 main-title">ПУБЛИКАЦИИ</h2>
+		<h2 class="p--t-25 m--b-25 text--white text--XL text--uppercase text--500 p--r-75 main-title">ПУБЛИКАЦИИ</h2>
 		<div data-simple-tabs class="fx fx-jc--sb sm-fx-wr--w">
 			<div class="fx-el--30 sm-fx-el--100 m--y-15 button-tab active text--500 text--XXS text--uppercase" data-simple-tab data-hide-selector="[data-front-tabs]" data-show-selector="#tab-publications">ПУБЛИКАЦИИ</div>
 			<div class="fx-el--30 sm-fx-el--100 m--y-15 button-tab text--500 text--XXS text--uppercase" data-simple-tab data-hide-selector="[data-front-tabs]" data-show-selector="#tab-posters">ПЛАКАТЫ</div>
@@ -929,8 +929,18 @@
 		<div class="def-slider def-slider-1 arrows--top">
 			<div class="p--x-15">
 				<div class="fx sm-fx-wr--w">
-					<div class="fx-el--65 sm-h--300 sm-fx-el--100 bdrs--10 ibg ibg--cover">
-						<img src="assets/img/presentation1.jpg" alt="">
+					<div class="fx-el--65 sm-fx-el--100 ">
+						<div class="po--r">
+							<div class="bdrs--10 ibg ibg--cover ratio--16x9 ">
+								<img src="assets/img/presentation1.jpg" alt="">
+								
+							</div>
+							<div class="po--a background--cover fx fx-jc--c fx-ai--c">
+								<img src="assets/fonts/playbutton.svg" data-modal-trigger data-modal-id="video-poppup" data-modal-content='<iframe id="player" type="text/html" class="img--w ratio--16x9"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0"></iframe>' alt="" class="fx-el--25 playbutton">
+							</div>
+						</div>
 					</div>
 					<div class="fx-el--50 sm-fx-el--100 p--l-35 sm-p--l-15 p--t-15 p--r-15 mh--350 sm-mh--300 fx fx-d--c sm-fx-jc--sa">
 						<div class="text--dark-gray text--S text--500 m--b-15">
@@ -960,7 +970,25 @@
 				</div>	
 			</div>
 		</div>
-		
+		<div class="def-modal modal modal-bg" id="video-poppup">
+			<div class="def-modal__outer-container container">
+				<div class="def-modal__inner-container def-modal__inner-container--100">
+					<div class="def-modal__wrapper modal-window">
+						<div class="def-modal__top m--t-15">
+							<div class="def-modal__title text--500 text--dark-green text--XL">
+								<span class="modal-title">Видео</span>
+							</div>
+							<div class="def-modal__cross modal-cross">
+								<div class="def-modal__cross-line def-modal__cross-line--1"></div>
+								<div class="def-modal__cross-line def-modal__cross-line--2"></div>
+							</div>
+						</div>
+						<div class="def-modal__content-wrapper def-modal-class-name modal-content-wrapper modal-content">
+						</div>
+					</div>
+				</div>  
+			</div>
+		</div>
 	</div>
 </section>
 <section class="m--y-75">
