@@ -529,6 +529,9 @@ body.lock{
 		font-style: unset;
 	}
 }
+.clear{
+	clear: both;
+}
 .highlighted-block{
 	background: rgba($darkGreen, .15);
 	padding: 20px;
