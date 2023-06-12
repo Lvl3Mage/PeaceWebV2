@@ -124,7 +124,7 @@
 			// position: relative;
 			.slick-arrow{
 				position: absolute;
-				bottom: calc(100% - 3px - 25px - 10px);//100% - top margin - top offset
+				top: calc(0% + 25px);//0% + size (+ offset)
 				right: 5px; // offset x
 
 				cursor: pointer;
