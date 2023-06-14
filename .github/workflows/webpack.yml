@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Build webpack and deploy to pages
 permissions:
   contents: write
 on:
