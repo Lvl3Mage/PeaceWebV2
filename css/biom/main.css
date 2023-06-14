@@ -1058,6 +1058,9 @@ ul:not(.def-text > ul) {
 .p--15 {
   padding: 15px;
 }
+.p--20 {
+  padding: 20px;
+}
 .p--25 {
   padding: 25px;
 }
@@ -1172,6 +1175,10 @@ ul:not(.def-text > ul) {
   padding-left: 15px;
   padding-right: 15px;
 }
+.p--x-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .p--x-25 {
   padding-left: 25px;
   padding-right: 25px;
@@ -1199,6 +1206,10 @@ ul:not(.def-text > ul) {
 .p--y-15 {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.p--y-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .p--y-25 {
   padding-top: 25px;
@@ -1782,6 +1793,9 @@ ul:not(.def-text > ul) {
   .lg-p--15 {
     padding: 15px;
   }
+  .lg-p--20 {
+    padding: 20px;
+  }
   .lg-p--25 {
     padding: 25px;
   }
@@ -1896,6 +1910,10 @@ ul:not(.def-text > ul) {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .lg-p--x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .lg-p--x-25 {
     padding-left: 25px;
     padding-right: 25px;
@@ -1923,6 +1941,10 @@ ul:not(.def-text > ul) {
   .lg-p--y-15 {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .lg-p--y-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .lg-p--y-25 {
     padding-top: 25px;
@@ -2500,6 +2522,9 @@ ul:not(.def-text > ul) {
   .md-p--15 {
     padding: 15px;
   }
+  .md-p--20 {
+    padding: 20px;
+  }
   .md-p--25 {
     padding: 25px;
   }
@@ -2614,6 +2639,10 @@ ul:not(.def-text > ul) {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .md-p--x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .md-p--x-25 {
     padding-left: 25px;
     padding-right: 25px;
@@ -2641,6 +2670,10 @@ ul:not(.def-text > ul) {
   .md-p--y-15 {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .md-p--y-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .md-p--y-25 {
     padding-top: 25px;
@@ -3218,6 +3251,9 @@ ul:not(.def-text > ul) {
   .sm-p--15 {
     padding: 15px;
   }
+  .sm-p--20 {
+    padding: 20px;
+  }
   .sm-p--25 {
     padding: 25px;
   }
@@ -3332,6 +3368,10 @@ ul:not(.def-text > ul) {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .sm-p--x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .sm-p--x-25 {
     padding-left: 25px;
     padding-right: 25px;
@@ -3359,6 +3399,10 @@ ul:not(.def-text > ul) {
   .sm-p--y-15 {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .sm-p--y-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .sm-p--y-25 {
     padding-top: 25px;
@@ -3936,6 +3980,9 @@ ul:not(.def-text > ul) {
   .xsm-p--15 {
     padding: 15px;
   }
+  .xsm-p--20 {
+    padding: 20px;
+  }
   .xsm-p--25 {
     padding: 25px;
   }
@@ -4050,6 +4097,10 @@ ul:not(.def-text > ul) {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .xsm-p--x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .xsm-p--x-25 {
     padding-left: 25px;
     padding-right: 25px;
@@ -4077,6 +4128,10 @@ ul:not(.def-text > ul) {
   .xsm-p--y-15 {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .xsm-p--y-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .xsm-p--y-25 {
     padding-top: 25px;
@@ -4654,6 +4709,9 @@ ul:not(.def-text > ul) {
   .xxsm-p--15 {
     padding: 15px;
   }
+  .xxsm-p--20 {
+    padding: 20px;
+  }
   .xxsm-p--25 {
     padding: 25px;
   }
@@ -4768,6 +4826,10 @@ ul:not(.def-text > ul) {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .xxsm-p--x-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .xxsm-p--x-25 {
     padding-left: 25px;
     padding-right: 25px;
@@ -4795,6 +4857,10 @@ ul:not(.def-text > ul) {
   .xxsm-p--y-15 {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+  .xxsm-p--y-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .xxsm-p--y-25 {
     padding-top: 25px;
@@ -5533,6 +5599,11 @@ ul:not(.def-text > ul) {
   left: 0;
   width: 100%;
 }
+.background--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .background--white {
   background-color: #FFF;
 }
@@ -5541,6 +5612,9 @@ ul:not(.def-text > ul) {
 }
 .background--pastel-green {
   background-color: #E2FFB1;
+}
+.background--opacity-0-9 {
+  opacity: 0.9;
 }
 .background--opacity-0-7 {
   opacity: 0.7;
@@ -6002,7 +6076,7 @@ body.lock {
 }
 
 .playbutton {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: pointer;
   transition: all 0.5s;
 }
