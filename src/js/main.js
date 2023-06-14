@@ -12,7 +12,14 @@ import {CloseModal, OpenModal} from './libs/modal.js';
 
 
 $(document).ready(function(){
-
+	let sliders = $('.custom-slider');
+	for(let slider of sliders){
+		let conf = $(slider).data('slider-settings');
+		if(typeof conf === 'string'){
+			conf = JSON.parse(conf);
+		}
+		$(slider).slick(conf);
+	}
 	$('.banner-slider').slick({
 		arrows: true,
 		dots: true,
@@ -88,6 +95,7 @@ $(document).ready(function(){
 			}
 		],
 	});
+	
 	$('.def-slider-3-dots').slick({
 		arrows: true,
 		dots: true,

@@ -104,6 +104,11 @@
 		left: 0;
 		width: 100%;
 	}
+	&--bottom{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
 	&--white{
 		background-color: $white;
 	}
@@ -112,6 +117,9 @@
 	}
 	&--pastel-green {
 		background-color: $pastelGreen;
+	}
+	&--opacity-0-9 {
+		opacity: 0.9;
 	}
 	&--opacity-0-7 {
 		opacity: 0.7;
@@ -548,7 +556,7 @@ body.lock{
 	}
 }
 .playbutton{
-	opacity: 0.5;
+	opacity: 0.6;
 	cursor: pointer;
 	transition: all 0.5s;
 	&:hover{
