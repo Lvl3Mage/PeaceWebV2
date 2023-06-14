@@ -62,7 +62,7 @@
 }
 .image-card{
 	border-radius: 5px;
-	border: 1px solid #1A8400;
+	border: 1px solid $darkGreen;
 	transition: all 0.3s;
 }
 .slick-current{
@@ -93,12 +93,32 @@
 			flex: 0 0 100%;
 		}
 	}
-	&__head {
-		border-left: 10px solid $darkGreen;
-		padding-left: 15px;
+	&__tab{
+		margin-bottom: 20px;
+		&-title{
+			color: #474747;
+			padding-left: 15px;
+			border-left: 10px solid transparent;
+			transition: all 0.3s;
+		}
+		cursor: pointer;
+		
+		transition: all 0.3s;
+		&.active{
+			.networking-map__tab-title{
+				color: $darkGreen;
+				border-left: 10px solid $darkGreen;
+			}
+		}
+	}
+	&__dropdown{
+		padding-left: 25px;
+		overflow: hidden;
+		height: 0;
+
 	}
 	&__overlay-wrapper {
-		&:hover, &:focus{
+		&.active{
 			.networking-map__overlay{
 				opacity: 1;
 			}
