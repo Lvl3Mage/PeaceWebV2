@@ -5537,6 +5537,9 @@ ul:not(.def-text > ul) {
 .card--shadow {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
 }
+.card--shadow-hard {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .card-border--dark-green {
   border: 1px solid #1A8400;
 }
@@ -6084,6 +6087,120 @@ body.lock {
   transform: scale(1.1);
   filter: drop-shadow(0px 0px 5px black);
   transition: all 0.5s;
+}
+
+.progress-bar {
+  position: relative;
+}
+.progress-bar--small {
+  height: 2px;
+  background: #1A8400;
+}
+.progress-bar--large {
+  height: 4px;
+  border-radius: 10px;
+  background: #1A8400;
+}
+.progress-bar__elem {
+  left: var(--percentage);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+.progress-bar__elem--simple {
+  border-radius: 50%;
+  background: #1A8400;
+  height: 20px;
+  width: 20px;
+  transform: translateX(-10px);
+}
+.progress-bar__elem--yearly {
+  --percentage: calc(100% * ((var(--year) - var(--start-year)) / (var(--end-year) - var(--start-year))));
+}
+
+.year-progress-bar {
+  margin-top: 120px;
+  margin-bottom: 60px;
+  border-right: 120px solid transparent;
+  border-left: 120px solid transparent;
+  margin-right: 50px;
+}
+.year-progress-bar:before, .year-progress-bar:after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  height: 4px;
+  transform-origin: calc(100% - 2px) 50%;
+  width: 20px;
+  background: #1A8400;
+  z-index: -1;
+}
+.year-progress-bar:before {
+  transform: rotate(-45deg);
+}
+.year-progress-bar:after {
+  transform: rotate(45deg);
+}
+.year-progress-bar__elem {
+  width: 50px;
+  height: 20px;
+  transform: translateX(-25px);
+}
+.year-progress-bar__elem--end {
+  left: calc(100% + 120px);
+}
+.year-progress-bar__elem-circle {
+  position: absolute;
+  background: #2A88F9;
+  transition: all 0.3s;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.year-progress-bar__elem-circle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 1px solid #2A88F9;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.year-progress-bar__elem:hover .year-progress-bar__elem-circle {
+  background: #6FBC31;
+}
+.year-progress-bar__elem:hover .year-progress-bar__elem-circle:before {
+  border: 1px solid #6FBC31;
+  opacity: 1;
+  transform: scale(1.7);
+}
+.year-progress-bar__elem:hover .year-progress-bar__elem-poppup {
+  transform: translateY(0);
+  opacity: 1;
+}
+.year-progress-bar__elem-year {
+  position: absolute;
+  top: 100%;
+  left: -25px;
+  right: -25px;
+  text-align: center;
+  padding-top: 10px;
+}
+.year-progress-bar__elem-poppup {
+  position: absolute;
+  bottom: 100%;
+  left: -100px;
+  right: -100px;
+  text-align: center;
+  padding-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.3s;
 }
 
 .banner-slider__slide {
