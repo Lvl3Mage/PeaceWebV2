@@ -5284,7 +5284,6 @@ ul:not(.def-text > ul) {
 
 .header {
   position: relative;
-  overflow: hidden;
 }
 @media (max-width: 992px) {
   .header {
@@ -5336,6 +5335,68 @@ ul:not(.def-text > ul) {
   display: flex;
   justify-content: space-around;
 }
+.header__navbar > li {
+  margin: 0 10px;
+  list-style: none;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__navbar > li[\:has\(ul\)]:after {
+  content: "";
+  flex: 0 0 0.5em;
+  height: 0.5em;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(135deg) translateY(0.2em);
+  margin-left: 10px;
+}
+.header__navbar > li:has(ul):after {
+  content: "";
+  flex: 0 0 0.5em;
+  height: 0.5em;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(135deg) translateY(0.2em);
+  margin-left: 10px;
+}
+.header__navbar > li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.header__navbar > li:nth-last-child(1) ul, .header__navbar > li:nth-last-child(2) ul {
+  left: auto;
+  right: -10px;
+}
+.header__navbar > li > ul {
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+  border-top: 15px solid transparent;
+  width: 175px;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  left: -10px;
+  top: 100%;
+  border-bottom: 3px solid #6FBC31;
+  background-image: linear-gradient(145deg, #6FBC31 0%, #1A8400 100%) !important;
+  background-clip: padding-box;
+}
+.header__navbar > li > ul > li {
+  margin: 7px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #FFF;
+}
+.header__navbar > li > ul > li:hover {
+  color: #000;
+}
 @media (max-width: 992px) {
   .header__desktop-element {
     display: none !important;
@@ -5348,9 +5409,6 @@ ul:not(.def-text > ul) {
 .header__nav-element.current-menu-item {
   color: #1A8400;
   font-weight: 700;
-}
-.header__sub-menu {
-  display: none;
 }
 .header__languages {
   display: flex;
@@ -5396,11 +5454,15 @@ ul:not(.def-text > ul) {
   position: absolute;
   right: 0;
   top: 0;
-  width: 280px;
+  bottom: 0;
+  overflow: hidden;
+  width: auto;
   z-index: -1;
 }
 .header__decor img {
-  width: 100%;
+  top: 0;
+  right: 0;
+  width: 280px;
   height: auto;
 }
 .header__burger-wrapper {
