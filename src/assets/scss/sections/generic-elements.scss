@@ -694,3 +694,47 @@ body.lock{
 		}
 	}
 }
+.accordeon {
+	&__trigger {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: all 0.3s;
+		&:hover{
+			&:before{
+
+				--offset-mul: 0.2;
+			}
+		}
+		&:active{
+			filter: brightness(0.8);
+		}
+		&:before{
+			content: '';
+			border-left: 4px solid $white;
+			border-top: 4px solid $white;
+
+			width: 20px;
+			height: 20px;
+
+			--rotation: 225deg;
+			--offset: -5px;
+			--offset-mul: 1;
+			transform: translateY(calc(var(--offset) * var(--offset-mul))) rotate(var(--rotation));
+			transition: all 0.3s;
+			margin-right: 15px;
+		}
+	}
+	&.active{
+		.accordeon__trigger{
+			&:before{
+				--rotation: 45deg;
+				--offset: 5px;
+			}
+		}
+	}
+	&__list {
+		overflow: hidden;
+		height: 0;
+	}
+}

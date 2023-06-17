@@ -258,19 +258,33 @@ $(document).on( "click", "[data-mob-menu-trigger]", function(){
 $(document).on( "click", "[data-dropdown-menu-trigger]", function(){
 	let container = $(this).closest('[data-dropdown-menu-container]');
 	let dropdowns = container.find('[data-dropdown]');
-	let curDropdown = $(this).closest("[data-dropdown-wrapper]").find("[data-dropdown]");
-	for(let dropdown of dropdowns){
-		if(dropdown != curDropdown[0]){
-			$(dropdown).closest('[data-dropdown-wrapper]').removeClass('active');
-			$(dropdown).animate({
-				height: "0px",
-			}, 400);
+	let curWrapper = $(this).closest("[data-dropdown-wrapper]");
+	let curDropdown = curWrapper.find("[data-dropdown]");
+
+	if(!container.is('[data-allow-multiple-open]')){
+		for(let dropdown of dropdowns){
+			if(dropdown != curDropdown[0]){
+				$(dropdown).closest('[data-dropdown-wrapper]').removeClass('active');
+				$(dropdown).animate({
+					height: "0px",
+				}, 400);
+			}
 		}
+
 	}
-	curDropdown.closest('[data-dropdown-wrapper]').addClass('active');
-	curDropdown.animate({
-		height: curDropdown.children().css('height'),
-	}, 400);
+	if(curWrapper.hasClass('active')){
+		curWrapper.removeClass('active');
+		curDropdown.animate({
+			height: 0 +"px",
+		}, 400);
+	}
+	else{
+		curWrapper.addClass('active');
+		curDropdown.animate({
+			height: curDropdown.children().css('height'),
+		}, 400);
+
+	}
 })
 
 //Mob menu specialized dropdown
