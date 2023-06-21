@@ -8635,6 +8635,12 @@ body.lock {
 .networking-map__overlay-wrapper:hover .networking-map__overlay {
   opacity: 1;
 }
+.networking-map[\:not-has\(.networking-map__overlay-wrapper\:hover\)] .networking-map__overlay {
+  opacity: 1;
+}
+.networking-map:not(.networking-map:has(.networking-map__overlay-wrapper:hover)) .networking-map__overlay {
+  opacity: 1;
+}
 .networking-map__overlay {
   pointer-events: none;
   transition: all 0.3s;
@@ -8643,6 +8649,9 @@ body.lock {
   left: 0;
   top: 0;
   width: 65%;
+}
+.networking-map__overlay--visible {
+  opacity: 1;
 }
 @media (max-width: 992px) {
   .networking-map__overlay {
