@@ -482,6 +482,18 @@ ul:not(.def-text > ul) {
   flex-grow: 1;
   flex-basis: 0;
 }
+@media (max-width: 992px) {
+  .def-slider.arrows--side {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .def-slider.arrows--side {
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+}
 .def-slider.arrows--side .slick-dots {
   flex: 0 0 100%;
 }
