@@ -8613,7 +8613,7 @@ body.lock {
   }
 }
 .networking-map__tab {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
