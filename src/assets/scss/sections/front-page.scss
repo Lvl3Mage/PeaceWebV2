@@ -104,7 +104,7 @@
 		cursor: pointer;
 		
 		transition: all 0.3s;
-		&.active{
+		&:hover{//replace with &.active
 			.networking-map__tab-title{
 				color: $darkGreen;
 				border-left: 10px solid $darkGreen;
@@ -118,7 +118,7 @@
 
 	}
 	&__overlay-wrapper {
-		&.active{
+		&:hover{//replace with &.active
 			.networking-map__overlay{
 				opacity: 1;
 			}
