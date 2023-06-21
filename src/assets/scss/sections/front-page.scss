@@ -124,6 +124,11 @@
 			}
 		}
 	}
+	&:not(&:has(.networking-map__overlay-wrapper:hover)){
+		.networking-map__overlay{
+			opacity: 1;
+		}	
+	}
 	&__overlay {
 		pointer-events: none;
 		transition: all 0.3s;
@@ -132,6 +137,9 @@
 		left: 0;
 		top: 0;
 		width: 65%;
+		&--visible{
+			opacity: 1;
+		}
 		@include breakpoint-down($tabletWidth){
 			width: 100%;
 		}
