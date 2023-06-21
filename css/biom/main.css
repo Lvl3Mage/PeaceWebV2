@@ -8623,7 +8623,7 @@ body.lock {
   border-left: 10px solid transparent;
   transition: all 0.3s;
 }
-.networking-map__tab.active .networking-map__tab-title {
+.networking-map__tab:hover .networking-map__tab-title {
   color: #1A8400;
   border-left: 10px solid #1A8400;
 }
@@ -8632,7 +8632,7 @@ body.lock {
   overflow: hidden;
   height: 0;
 }
-.networking-map__overlay-wrapper.active .networking-map__overlay {
+.networking-map__overlay-wrapper:hover .networking-map__overlay {
   opacity: 1;
 }
 .networking-map__overlay {
