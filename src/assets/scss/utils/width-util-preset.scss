@@ -1,7 +1,7 @@
 &{
 
 	@for $i from 1 through 20 {
-		&--#{$i*5}{
+		&--#{$i*5}p{
 			width: #{$i * 5%};
 		}
 	}
