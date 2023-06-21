@@ -184,6 +184,12 @@
 			}
 			display: flex;
 			column-gap: 35px;
+			@include breakpoint-down($tabletWidth){
+				column-gap: 15px;
+			}
+			@include breakpoint-down($smTabletWidth){
+				column-gap: 5px;
+			}
 			.slick-dots{
 				flex: 0 0 100%;
 			}
