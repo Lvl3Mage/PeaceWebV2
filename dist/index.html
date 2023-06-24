@@ -17,8 +17,8 @@
 				</div>
 				<ul class="header__navbar header__desktop-element">
 				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7"><a href="https://biom.dev.marmadot.com/" aria-current="page">Главная</a></li>
-				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12"><span>О БИОМе</span>
-				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="#">Направления</a></li>
+				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12">
+				    	<span>О БИОМе</span>
 				        <ul class="header__sub-menu">
 				            <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="#">Изменение Климата</a></li>
 				            <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="#">Экологическая безопасность</a></li>
@@ -30,6 +30,7 @@
 				            <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="#">Миссия Биома</a></li>
 				        </ul>
 				    </li>
+				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="#">Направления</a></li>
 				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="#">Наши учителя</a></li>
 				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a href="#">Информатека</a></li>
 				    <li class="header__nav-element menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="#">События</a></li>
@@ -197,7 +198,7 @@
 		</div>
 	</header>
 <section>
-	<div class="banner-slider def-slider arrows--overlay dots--overlay">
+	<div class="banner-slider-auto def-slider arrows--overlay dots--overlay">
 		<div class="banner-slider__slide">
 			<div class="banner-slider__slide-background ibg ibg--cover">
 				<img src="assets/img/banner.jpg" alt="">
@@ -249,7 +250,47 @@
 	</div>
 </section>
 
+<section>
+	<div class="container">
+		<div data-dropdown-menu-container data-allow-multiple-open>
+			<div class="accordeon" data-dropdown-wrapper>
+				<div class="accordeon__trigger m--b-25 text--400 text--S text--white text--uppercase card--rounded background--dark-green p--x-25 p--y-15" data-dropdown-menu-trigger>
+					Модуль 1| Базовый курс по вопросам изменения климата
+				</div>
+				<div class="accordeon__list" data-dropdown>
+					<div class="p--b-15">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, id sapiente nemo cumque sed iste velit quidem odio ea voluptate quia ex aperiam distinctio unde veniam. Placeat quisquam veritatis, vel.
+						
+					</div>
+				</div>
+			</div>
+			<div class="accordeon" data-dropdown-wrapper>
+				<div class="accordeon__trigger m--b-25 text--400 text--S text--white text--uppercase card--rounded background--dark-green p--x-25 p--y-15" data-dropdown-menu-trigger>
+					Модуль 1| Базовый курс по вопросам изменения климата
+				</div>
+				<div class="accordeon__list" data-dropdown>
+					<div class="p--b-15">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, id sapiente nemo cumque sed iste velit quidem odio ea voluptate quia ex aperiam distinctio unde veniam. Placeat quisquam veritatis, vel.
+						
+					</div>
+				</div>
+			</div>
+			<div class="accordeon" data-dropdown-wrapper>
+				<div class="accordeon__trigger m--b-25 text--400 text--S text--white text--uppercase card--rounded background--dark-green p--x-25 p--y-15" data-dropdown-menu-trigger>
+					Модуль 1| Базовый курс по вопросам изменения климата
+				</div>
+				<div class="accordeon__list" data-dropdown>
+					<div class="p--b-15">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, id sapiente nemo cumque sed iste velit quidem odio ea voluptate quia ex aperiam distinctio unde veniam. Placeat quisquam veritatis, vel.
+						
+					</div>
+				</div>
+			</div>
 
+			
+		</div>
+	</div>
+</section>
 <section class="m--t-100">
 	<div class="container">
 		<h2 class="m--y-25 text--dark-green text--XL text--uppercase text--500 main-title">ЧТО ТАКОЕ БИОМ?</h2>
@@ -938,7 +979,7 @@
 							<div class="po--a background--cover fx fx-jc--c fx-ai--c">
 								<img src="assets/fonts/playbutton.svg" data-modal-trigger data-modal-id="video-poppup" data-modal-content='<iframe id="player" type="text/html" class="img--w ratio--16x9"
   src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
-  frameborder="0"></iframe>' alt="" class="fx-el--25 playbutton">
+  frameborder="0"></iframe>' alt="" class="fx-el--25 playbutton img--min-size-0">
 							</div>
 						</div>
 					</div>
@@ -1022,37 +1063,66 @@
 		<div class="p--t-25 text--dark-green text--XL text--uppercase text--500">НЕТВОРКИНГ</div>
 		<div class="networking-map">
 			<div class="networking-map__map">
-				<img src="assets/img/map-1.png" alt="">
+				<img src="assets/img/Map-01.png" alt="">
 			</div>
 			<div class="networking-map__content">
-				<div class="networking-map__head text--dark-green text--S text--500 m--b-15">
-					Сеть поддержки Орхунской конвенции
-				</div>
-				<div class="p--x-25">
-					<div class="m--b-15">
-						Рамочная Конвенция ООН об изменении климата: (Закон Кыргызской Республики о присоединении от 14 января 2000 года № 11), Киотский Протокол: (закон Кыргызской Республики...
-						<a href="" class="text--dark-green text--500 m--t-15">Читать далее</a>
+				<div class="networking-map__overlay-wrapper networking-map__tab m--b-15 text--S text--500">
+					<div class="networking-map__tab-title">
+						Сеть поддержки Орхунской конвенции
 					</div>
-					<div class="networking-map__overlay-wrapper m--b-15 text--dark-gray text--S text--500">
+					<div class="networking-map__dropdown" data-dropdown>
+						<div class="p--t-15 text--XXS text--dark-gray text--400">
+							Рамочная Конвенция ООН об изменении климата: (Закон Кыргызской Республики о присоединении от 14 января 2000 года № 11), Киотский Протокол: (закон Кыргызской Республики...
+							<a href="" class="text--dark-green text--500 m--t-15">Читать далее</a>
+						</div>
+					</div>
+					<div class="networking-map__overlay">
+						<img src="assets/img/Map-02.png" alt="">
+					</div>
+				</div>
+				<div class="networking-map__overlay-wrapper networking-map__tab m--b-15 text--S text--500">
+					<div class="networking-map__tab-title">
 						Сеть “Экологические НПО за устойчивое развитие”
-						<div class="networking-map__overlay">
-							<img src="assets/img/map-1.png" alt="">
+					</div>
+					<div class="networking-map__dropdown" data-dropdown>
+						<div class="p--t-15 text--XXS text--dark-gray text--400">
+							Рамочная Конвенция ООН об изменении климата: (Закон Кыргызской Республики о присоединении от 14 января 2000 года № 11), Киотский Протокол: (закон Кыргызской Республики...
+							<a href="" class="text--dark-green text--500 m--t-15">Читать далее</a>
 						</div>
 					</div>
-					<div class="networking-map__overlay-wrapper m--b-15 text--dark-gray text--S text--500">
-						Сеть по энергоэффективности и устойчивому климату
-						<div class="networking-map__overlay">
-							<img src="assets/img/map-1.png" alt="">
-						</div>
-					</div>
-					<div class="networking-map__overlay-wrapper m--b-15 text--dark-gray text--S text--500">
-						Сеть “Местные сообщества за сохранение биоразнообразия”
-						<div class="networking-map__overlay">
-							<img src="assets/img/map-1.png" alt="">
-						</div>
+					<div class="networking-map__overlay">
+						<img src="assets/img/Map-03.png" alt="">
 					</div>
 				</div>
-			</div>
+				<div class="networking-map__overlay-wrapper networking-map__tab m--b-15 text--S text--500">
+					<div class="networking-map__tab-title">
+						Сеть по энергоэффективности и устойчивому климату
+					</div>
+					<div class="networking-map__dropdown" data-dropdown>
+						<div class="p--t-15 text--XXS text--dark-gray text--400">
+							Рамочная Конвенция ООН об изменении климата: (Закон Кыргызской Республики о присоединении от 14 января 2000 года № 11), Киотский Протокол: (закон Кыргызской Республики...
+							<a href="" class="text--dark-green text--500 m--t-15">Читать далее</a>
+						</div>
+					</div>
+					<div class="networking-map__overlay">
+						<img src="assets/img/Map-04.png" alt="">
+					</div>
+				</div>
+				<div class="networking-map__overlay-wrapper networking-map__tab m--b-15 text--S text--500">
+					<div class="networking-map__tab-title">
+						Сеть “Местные сообщества за сохранение биоразнообразия”
+					</div>
+					<div class="networking-map__dropdown" data-dropdown>
+						<div class="p--t-15 text--XXS text--dark-gray text--400">
+							Рамочная Конвенция ООН об изменении климата: (Закон Кыргызской Республики о присоединении от 14 января 2000 года № 11), Киотский Протокол: (закон Кыргызской Республики...
+							<a href="" class="text--dark-green text--500 m--t-15">Читать далее</a>
+						</div>
+					</div>
+					<div class="networking-map__overlay">
+						<img src="assets/img/Map-05.png" alt="">
+					</div>
+				</div>
+		</div>
 		</div>
 	</div>
 </section>
@@ -1164,6 +1234,43 @@
 					<img src="assets/img/stock1.jpg" alt="">
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="def-slider arrows--side custom-slider" 
+		data-slider-settings='{"arrows":true,"infinite":true,"speed":500,"adaptiveHeight":true,"slidesToShow":2,"responsive":[{"breakpoint":768,"settings":{"slidesToShow":1}}]}'>
+			<div class="p--x-15">
+				<div class="po--r">
+					<img src="assets/img/stock1.jpg" alt="" class="img--w">
+					<div class="text--white background--opacity-0-9 background--bottom z--mid p--20 background--dark-green">
+						ЭД «БИОМ» на Конференции ООН по Устойчивому Развитию, Рио-де-Жанейро (Бразилия)
+					</div>
+					<div class="po--a background--cover fx fx-jc--c fx-ai--c z--front">
+						<img src="assets/fonts/playbutton.svg" data-modal-trigger data-modal-id="video-poppup" data-modal-content='<iframe id="player" type="text/html" class="img--w ratio--16x9"
+src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+frameborder="0"></iframe>' alt="" class="fx-el--25 playbutton img--min-size-0">
+					</div>
+				</div>
+			</div>
+			<div class="p--x-15">
+				<div class="po--r">
+					<img src="assets/img/stock1.jpg" alt="" class="img--w">
+					<div class="text--white background--opacity-0-9 background--bottom z--front p--20 background--dark-green">
+						ЭД «БИОМ» на Конференции ООН по Устойчивому Развитию, Рио-де-Жанейро (Бразилия)
+					</div>
+				</div>
+			</div>
+			<div class="p--x-15">
+				<div class="po--r">
+					<img src="assets/img/stock1.jpg" alt="" class="img--w">
+					<div class="text--white background--opacity-0-9 background--bottom z--front p--20 background--dark-green">
+						ЭД «БИОМ» на Конференции ООН по Устойчивому Развитию, Рио-де-Жанейро (Бразилия)
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </section>
