@@ -740,7 +740,7 @@ body.lock{
 }
 .breadcrumbs {
 	font-family: $textFont;
-	@include fSize($tabletWidth, $phoneWidth, $fontSizeS_desktop, $fontSizeS_mobile);
+	@include fSize($tabletWidth, $phoneWidth, $fontSizeXXS_desktop, $fontSizeXXS_mobile);
 	font-weight: 500;
 	color: $lightGray;
 	.breadcrumb_last {
