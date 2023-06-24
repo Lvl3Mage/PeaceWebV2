@@ -738,3 +738,13 @@ body.lock{
 		height: 0;
 	}
 }
+.breadcrumbs {
+	font-family: $textFont;
+	@include fSize($tabletWidth, $phoneWidth, $fontSizeXXS_desktop, $fontSizeXXS_mobile);
+	font-weight: 500;
+	color: $lightGray;
+	.breadcrumb_last {
+		color: $darkGreen;
+	}
+
+}
