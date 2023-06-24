@@ -8509,6 +8509,26 @@ body.lock {
   height: 0;
 }
 
+.breadcrumbs {
+  font-family: Roboto, sans-serif;
+  font-size: calc((100vw - 576px)/(992 - 576)*(16 - 12) + 12px);
+  font-weight: 500;
+  color: #9C9C9C;
+}
+@media screen and (min-width: 992px) {
+  .breadcrumbs {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .breadcrumbs {
+    font-size: 12px;
+  }
+}
+.breadcrumbs .breadcrumb_last {
+  color: #1A8400;
+}
+
 .banner-slider__slide {
   height: 600px;
   max-height: 80vh;
