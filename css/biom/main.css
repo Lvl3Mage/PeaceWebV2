@@ -7386,6 +7386,22 @@ ul:not(.def-text > ul) {
 .text--XXS--static {
   font-size: 16px;
 }
+.text--XXXS {
+  font-size: calc((100vw - 576px)/(992 - 576)*(14 - 9) + 9px);
+}
+@media screen and (min-width: 992px) {
+  .text--XXXS {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .text--XXXS {
+    font-size: 9px;
+  }
+}
+.text--XXXS--static {
+  font-size: 14px;
+}
 .text--uppercase {
   text-transform: uppercase;
 }
