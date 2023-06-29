@@ -748,6 +748,33 @@ body.lock{
 	}
 
 }
+.page-numbers{
+	display: flex;
+	justify-content: center;
+	li{
+		list-style: none;
+		position: relative;
+		color: $darkGreen;
+		margin: 0 10px;
+		span.current{
+			color: #fff;
+			&:before{
+				content: '';
+				position: absolute;
+				left: -5px;
+				right: -5px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: auto;
+				aspect-ratio: 1/1;
+				background: $darkGreen;
+				border-radius: 50%;
+				z-index: -1;
+			}
+		}
+	}
+}
 .audio-player {
 	&__button {
 		border-radius: 5px;
