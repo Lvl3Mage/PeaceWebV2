@@ -8529,6 +8529,66 @@ body.lock {
   color: #1A8400;
 }
 
+.audio-player {
+  /* Mouse-over effects */
+}
+.audio-player__button {
+  border-radius: 5px;
+  border: 1px solid #1A8400;
+  background: #E8FFC1;
+  padding: 10px;
+}
+.audio-player input[type=range] {
+  position: relative;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+}
+.audio-player input[type=range]:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+.audio-player input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 0;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+.audio-player input[type=range]::-moz-range-thumb {
+  width: 0;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+.audio-player input[type=range]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: calc(100% - var(--coverage));
+  background: linear-gradient(191deg, #86D401 0%, #0F509F 89.04%);
+}
+
 .banner-slider__slide {
   height: 600px;
   max-height: 80vh;
