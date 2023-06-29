@@ -8529,6 +8529,34 @@ body.lock {
   color: #1A8400;
 }
 
+.page-numbers {
+  display: flex;
+  justify-content: center;
+}
+.page-numbers li {
+  list-style: none;
+  position: relative;
+  color: #1A8400;
+  margin: 0 10px;
+}
+.page-numbers li span.current {
+  color: #fff;
+}
+.page-numbers li span.current:before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: auto;
+  aspect-ratio: 1/1;
+  background: #1A8400;
+  border-radius: 50%;
+  z-index: -1;
+}
+
 .audio-player {
   /* Mouse-over effects */
 }
