@@ -59,6 +59,12 @@
 			font-size: $fontSizeXXS_desktop;
 		}
 	}
+	&--XXXS{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXXXS_desktop, $fontSizeXXXS_mobile);
+		&--static{
+			font-size: $fontSizeXXXS_desktop;
+		}
+	}
 
 	&--uppercase{
 		text-transform: uppercase;
