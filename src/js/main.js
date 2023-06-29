@@ -336,3 +336,14 @@ $(document).on( "click", "[data-class-toggler]", function(){
 	//updating state
 	classToggle.attr('data-toggle-state', target.hasClass(classToToggle));
 });
+
+
+//Audio
+$(document).ready(function(){
+	$('.audio-player__track').attr("value",0).trigger("input");
+})
+
+$('.audio-player__track').on('input', function () {
+	this.style.setProperty('--coverage', $(this).val() + "%");
+	console.log("ASADS");
+});
