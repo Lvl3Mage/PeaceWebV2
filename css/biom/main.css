@@ -41,7 +41,7 @@
   ========================================================================== */
 body {
   font-family: Roboto, sans-serif;
-  color: #000;
+  color: #1A8400;
   font-size: calc((100vw - 576px)/(992 - 576)*(16 - 12) + 12px);
   font-weight: 400;
   line-height: 1.2;
