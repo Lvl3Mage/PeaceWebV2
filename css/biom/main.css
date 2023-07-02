@@ -7838,7 +7838,7 @@ ul:not(.def-text > ul) {
 .card-hover--background-tint:not(:hover) .card--background {
   background-color: #FFF !important;
 }
-.card-hover--glow .card--glow-element {
+.card-hover--glow .card--glow-element, .card-hover--glow.card--glow-element {
   transition: all 0.3s;
 }
 .card-hover--glow:hover {
