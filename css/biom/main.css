@@ -1710,11 +1710,20 @@ ul:not(.def-text > ul) {
 .mh--auto {
   height: auto;
 }
+.mh--50 {
+  min-height: 50px;
+}
 .mh--100 {
   min-height: 100px;
 }
+.mh--150 {
+  min-height: 150px;
+}
 .mh--200 {
   min-height: 200px;
+}
+.mh--250 {
+  min-height: 250px;
 }
 .mh--300 {
   min-height: 300px;
@@ -1724,6 +1733,9 @@ ul:not(.def-text > ul) {
 }
 .mh--400 {
   min-height: 400px;
+}
+.mh--450 {
+  min-height: 450px;
 }
 .mh--500 {
   min-height: 500px;
@@ -1738,11 +1750,20 @@ ul:not(.def-text > ul) {
 .mw--auto {
   min-width: auto;
 }
+.mw--50 {
+  min-width: 50px;
+}
 .mw--100 {
   min-width: 100px;
 }
+.mw--150 {
+  min-width: 150px;
+}
 .mw--200 {
   min-width: 200px;
+}
+.mw--250 {
+  min-width: 250px;
 }
 .mw--300 {
   min-width: 300px;
@@ -1752,6 +1773,9 @@ ul:not(.def-text > ul) {
 }
 .mw--400 {
   min-width: 400px;
+}
+.mw--450 {
+  min-width: 450px;
 }
 .mw--500 {
   min-width: 500px;
@@ -2806,11 +2830,20 @@ ul:not(.def-text > ul) {
   .lg-mh--auto {
     height: auto;
   }
+  .lg-mh--50 {
+    min-height: 50px;
+  }
   .lg-mh--100 {
     min-height: 100px;
   }
+  .lg-mh--150 {
+    min-height: 150px;
+  }
   .lg-mh--200 {
     min-height: 200px;
+  }
+  .lg-mh--250 {
+    min-height: 250px;
   }
   .lg-mh--300 {
     min-height: 300px;
@@ -2820,6 +2853,9 @@ ul:not(.def-text > ul) {
   }
   .lg-mh--400 {
     min-height: 400px;
+  }
+  .lg-mh--450 {
+    min-height: 450px;
   }
   .lg-mh--500 {
     min-height: 500px;
@@ -2833,11 +2869,20 @@ ul:not(.def-text > ul) {
   .lg-mw--auto {
     min-width: auto;
   }
+  .lg-mw--50 {
+    min-width: 50px;
+  }
   .lg-mw--100 {
     min-width: 100px;
   }
+  .lg-mw--150 {
+    min-width: 150px;
+  }
   .lg-mw--200 {
     min-width: 200px;
+  }
+  .lg-mw--250 {
+    min-width: 250px;
   }
   .lg-mw--300 {
     min-width: 300px;
@@ -2847,6 +2892,9 @@ ul:not(.def-text > ul) {
   }
   .lg-mw--400 {
     min-width: 400px;
+  }
+  .lg-mw--450 {
+    min-width: 450px;
   }
   .lg-mw--500 {
     min-width: 500px;
@@ -3901,11 +3949,20 @@ ul:not(.def-text > ul) {
   .md-mh--auto {
     height: auto;
   }
+  .md-mh--50 {
+    min-height: 50px;
+  }
   .md-mh--100 {
     min-height: 100px;
   }
+  .md-mh--150 {
+    min-height: 150px;
+  }
   .md-mh--200 {
     min-height: 200px;
+  }
+  .md-mh--250 {
+    min-height: 250px;
   }
   .md-mh--300 {
     min-height: 300px;
@@ -3915,6 +3972,9 @@ ul:not(.def-text > ul) {
   }
   .md-mh--400 {
     min-height: 400px;
+  }
+  .md-mh--450 {
+    min-height: 450px;
   }
   .md-mh--500 {
     min-height: 500px;
@@ -3928,11 +3988,20 @@ ul:not(.def-text > ul) {
   .md-mw--auto {
     min-width: auto;
   }
+  .md-mw--50 {
+    min-width: 50px;
+  }
   .md-mw--100 {
     min-width: 100px;
   }
+  .md-mw--150 {
+    min-width: 150px;
+  }
   .md-mw--200 {
     min-width: 200px;
+  }
+  .md-mw--250 {
+    min-width: 250px;
   }
   .md-mw--300 {
     min-width: 300px;
@@ -3942,6 +4011,9 @@ ul:not(.def-text > ul) {
   }
   .md-mw--400 {
     min-width: 400px;
+  }
+  .md-mw--450 {
+    min-width: 450px;
   }
   .md-mw--500 {
     min-width: 500px;
@@ -4996,11 +5068,20 @@ ul:not(.def-text > ul) {
   .sm-mh--auto {
     height: auto;
   }
+  .sm-mh--50 {
+    min-height: 50px;
+  }
   .sm-mh--100 {
     min-height: 100px;
   }
+  .sm-mh--150 {
+    min-height: 150px;
+  }
   .sm-mh--200 {
     min-height: 200px;
+  }
+  .sm-mh--250 {
+    min-height: 250px;
   }
   .sm-mh--300 {
     min-height: 300px;
@@ -5010,6 +5091,9 @@ ul:not(.def-text > ul) {
   }
   .sm-mh--400 {
     min-height: 400px;
+  }
+  .sm-mh--450 {
+    min-height: 450px;
   }
   .sm-mh--500 {
     min-height: 500px;
@@ -5023,11 +5107,20 @@ ul:not(.def-text > ul) {
   .sm-mw--auto {
     min-width: auto;
   }
+  .sm-mw--50 {
+    min-width: 50px;
+  }
   .sm-mw--100 {
     min-width: 100px;
   }
+  .sm-mw--150 {
+    min-width: 150px;
+  }
   .sm-mw--200 {
     min-width: 200px;
+  }
+  .sm-mw--250 {
+    min-width: 250px;
   }
   .sm-mw--300 {
     min-width: 300px;
@@ -5037,6 +5130,9 @@ ul:not(.def-text > ul) {
   }
   .sm-mw--400 {
     min-width: 400px;
+  }
+  .sm-mw--450 {
+    min-width: 450px;
   }
   .sm-mw--500 {
     min-width: 500px;
@@ -6091,11 +6187,20 @@ ul:not(.def-text > ul) {
   .xsm-mh--auto {
     height: auto;
   }
+  .xsm-mh--50 {
+    min-height: 50px;
+  }
   .xsm-mh--100 {
     min-height: 100px;
   }
+  .xsm-mh--150 {
+    min-height: 150px;
+  }
   .xsm-mh--200 {
     min-height: 200px;
+  }
+  .xsm-mh--250 {
+    min-height: 250px;
   }
   .xsm-mh--300 {
     min-height: 300px;
@@ -6105,6 +6210,9 @@ ul:not(.def-text > ul) {
   }
   .xsm-mh--400 {
     min-height: 400px;
+  }
+  .xsm-mh--450 {
+    min-height: 450px;
   }
   .xsm-mh--500 {
     min-height: 500px;
@@ -6118,11 +6226,20 @@ ul:not(.def-text > ul) {
   .xsm-mw--auto {
     min-width: auto;
   }
+  .xsm-mw--50 {
+    min-width: 50px;
+  }
   .xsm-mw--100 {
     min-width: 100px;
   }
+  .xsm-mw--150 {
+    min-width: 150px;
+  }
   .xsm-mw--200 {
     min-width: 200px;
+  }
+  .xsm-mw--250 {
+    min-width: 250px;
   }
   .xsm-mw--300 {
     min-width: 300px;
@@ -6132,6 +6249,9 @@ ul:not(.def-text > ul) {
   }
   .xsm-mw--400 {
     min-width: 400px;
+  }
+  .xsm-mw--450 {
+    min-width: 450px;
   }
   .xsm-mw--500 {
     min-width: 500px;
@@ -7186,11 +7306,20 @@ ul:not(.def-text > ul) {
   .xxsm-mh--auto {
     height: auto;
   }
+  .xxsm-mh--50 {
+    min-height: 50px;
+  }
   .xxsm-mh--100 {
     min-height: 100px;
   }
+  .xxsm-mh--150 {
+    min-height: 150px;
+  }
   .xxsm-mh--200 {
     min-height: 200px;
+  }
+  .xxsm-mh--250 {
+    min-height: 250px;
   }
   .xxsm-mh--300 {
     min-height: 300px;
@@ -7200,6 +7329,9 @@ ul:not(.def-text > ul) {
   }
   .xxsm-mh--400 {
     min-height: 400px;
+  }
+  .xxsm-mh--450 {
+    min-height: 450px;
   }
   .xxsm-mh--500 {
     min-height: 500px;
@@ -7213,11 +7345,20 @@ ul:not(.def-text > ul) {
   .xxsm-mw--auto {
     min-width: auto;
   }
+  .xxsm-mw--50 {
+    min-width: 50px;
+  }
   .xxsm-mw--100 {
     min-width: 100px;
   }
+  .xxsm-mw--150 {
+    min-width: 150px;
+  }
   .xxsm-mw--200 {
     min-width: 200px;
+  }
+  .xxsm-mw--250 {
+    min-width: 250px;
   }
   .xxsm-mw--300 {
     min-width: 300px;
@@ -7227,6 +7368,9 @@ ul:not(.def-text > ul) {
   }
   .xxsm-mw--400 {
     min-width: 400px;
+  }
+  .xxsm-mw--450 {
+    min-width: 450px;
   }
   .xxsm-mw--500 {
     min-width: 500px;
