@@ -5,22 +5,9 @@
 	&--auto{
 		height: auto;
 	}
-	&--100{
-		min-height: 100px;
-	}
-	&--200{
-		min-height: 200px;
-	}
-	&--300{
-		min-height: 300px;
-	}
-	&--350{
-		min-height: 350px;
-	}
-	&--400{
-		min-height: 400px;
-	}
-	&--500{
-		min-height: 500px;
+	@for $i from 1 through 10 {
+		&--#{$i / 2 * 10}0{
+			min-height: #{($i/2) *100}px;
+		}
 	}
 }
