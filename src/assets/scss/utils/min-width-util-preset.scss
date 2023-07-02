@@ -8,22 +8,9 @@
 	&--auto{
 		min-width: auto;
 	}
-	&--100{
-		min-width: 100px;
-	}
-	&--200{
-		min-width: 200px;
-	}
-	&--300{
-		min-width: 300px;
-	}
-	&--350{
-		min-width: 350px;
-	}
-	&--400{
-		min-width: 400px;
-	}
-	&--500{
-		min-width: 500px;
+	@for $i from 1 through 10 {
+		&--#{$i / 2 * 10}0{
+			min-width: #{($i/2) *100}px;
+		}
 	}
 }
