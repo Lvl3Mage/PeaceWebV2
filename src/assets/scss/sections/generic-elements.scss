@@ -29,7 +29,7 @@
 			}
 		}
 		&--glow{
-			.card--glow-element{
+			.card--glow-element, &.card--glow-element{
 				transition: all 0.3s;
 			}
 			&:hover{
