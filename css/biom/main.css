@@ -8790,21 +8790,54 @@ body.lock {
 .bird-slider {
   position: relative;
 }
+.bird-slider--button {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  right: 30px;
+  z-index: 1;
+  border-radius: 5px;
+  opacity: 0.8;
+  background: #1A8400;
+  padding: 0 45px;
+  margin: auto;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .bird-slider--button {
+    left: 15px;
+    right: 15px;
+    padding: 0 30px;
+  }
+}
 .bird-slider .slick-arrow {
   cursor: pointer;
   font-size: 0;
   line-height: 0;
   box-sizing: border-box;
-  width: 30px;
-  height: 8px;
-  margin: 20px 5px;
+  width: 15px;
+  height: 3px;
+  color: transparent;
+  font-size: calc((100vw - 576px)/(992 - 576)*(36 - 26) + 26px);
+  margin: 0.5em 5px;
   z-index: 10;
   background-color: transparent;
   border: none;
-  position: relative;
+  position: absolute;
+  bottom: 15px;
   filter: drop-shadow(-2px 2px 3px #222);
   transition: all 0.3s;
   opacity: 0.8;
+}
+@media screen and (min-width: 992px) {
+  .bird-slider .slick-arrow {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bird-slider .slick-arrow {
+    font-size: 26px;
+  }
 }
 .bird-slider .slick-arrow:before, .bird-slider .slick-arrow:after {
   display: block;
@@ -8815,9 +8848,8 @@ body.lock {
   bottom: 0;
   height: 100%;
   background: #FFF;
-  border-radius: 2px;
   position: absolute;
-  transform-origin: calc(100% - 3px) 50%;
+  transform-origin: calc(100% - 1px) 50%;
 }
 .bird-slider .slick-arrow:before {
   transform: rotate(45deg);
@@ -8845,10 +8877,20 @@ body.lock {
   position: absolute;
 }
 .bird-slider .slick-arrow.slick-prev {
-  left: 5%;
+  left: 45px;
+}
+@media (max-width: 768px) {
+  .bird-slider .slick-arrow.slick-prev {
+    left: 30px;
+  }
 }
 .bird-slider .slick-arrow.slick-next {
-  right: 5%;
+  right: 45px;
+}
+@media (max-width: 768px) {
+  .bird-slider .slick-arrow.slick-next {
+    right: 30px;
+  }
 }
 
 .footer {
