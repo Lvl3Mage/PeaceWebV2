@@ -8850,8 +8850,7 @@ body.lock {
   border: 1px solid #1A8400;
   transition: all 0.3s;
 }
-
-.slick-current .image-card {
+.image-card:hover {
   box-shadow: 4px 4px 20px #1A8400;
 }
 
