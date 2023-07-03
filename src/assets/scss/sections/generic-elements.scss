@@ -44,6 +44,15 @@
 				}
 				
 			}
+			&--black{
+				&:hover{
+
+					&.card--glow-element, .card--glow-element{
+						box-shadow: 0px 4px 20px #000;
+					}	
+				}
+				
+			}
 			
 		}
 		&--background-recolor{
