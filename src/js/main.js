@@ -249,11 +249,14 @@ function ActivateSimpleTab(simpleTab){
 //Mob menu
 $(document).on( "click", "[data-mob-menu-trigger]", function(){
 	$("[data-mob-menu-trigger]").toggleClass("active");
+	let top = Math.max($(".header").offset().top - $(window).scrollTop(),0) + $(".header").height();
 	$(".mob-menu").toggleClass("active");
+	$(".mob-menu__content").css("height", "calc(100vh - "+top + "px)");
+	// console.log(top);
 	$(".header__languages").toggleClass("active");
+
 	$('body').toggleClass('lock');
 });
-
 // generic dropdown
 $(document).on( "click", "[data-dropdown-menu-trigger]", function(){
 	let container = $(this).closest('[data-dropdown-menu-container]');
