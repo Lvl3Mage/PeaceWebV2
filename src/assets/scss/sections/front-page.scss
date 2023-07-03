@@ -64,12 +64,14 @@
 	border-radius: 5px;
 	border: 1px solid $darkGreen;
 	transition: all 0.3s;
-}
-.slick-current{
-	.image-card{
+	&:hover{
 		box-shadow: 4px 4px 20px $darkGreen;
 	}
 }
+// .slick-current{
+// 	.image-card{
+// 	}
+// }
 .networking-map {
 	display: flex;
 
