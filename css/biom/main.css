@@ -7579,6 +7579,9 @@ ul:not(.def-text > ul) {
 .text--dark-green {
   color: #1A8400;
 }
+.text--dark-blue {
+  color: #0F509F;
+}
 .text--light-green {
   color: #6FBC31;
 }
