@@ -748,6 +748,11 @@ body.lock{
 	}
 }
 .breadcrumbs {
+	&__wrapper{
+	}
+	&__container{
+		margin-top: 25px;
+	}
 	font-family: $textFont;
 	@include fSize($tabletWidth, $phoneWidth, $fontSizeXXS_desktop, $fontSizeXXS_mobile);
 	font-weight: 500;
