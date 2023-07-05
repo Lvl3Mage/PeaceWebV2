@@ -30,7 +30,7 @@ $(document).ready(function(){
 	});
 	$('.banner-slider-auto').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		dots: true,
 		infinite: true,
@@ -40,7 +40,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-1').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		infinite: true,
 		speed: 500,
@@ -49,7 +49,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-1-dots').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		infinite: true,
 		speed: 500,
@@ -59,7 +59,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-2').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		dots: true,
 		infinite: true,
@@ -70,7 +70,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-3').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		infinite: true,
 		speed: 500,
@@ -106,7 +106,7 @@ $(document).ready(function(){
 	
 	$('.def-slider-3-dots').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		dots: true,
 		infinite: true,
@@ -142,7 +142,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-4').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		infinite: true,
 		speed: 500,
@@ -177,7 +177,7 @@ $(document).ready(function(){
 	});
 	$('.def-slider-4-dots').slick({
 		autoplay:true,
-		autoplaySpeed:1500,
+		autoplaySpeed: 3000,
 		arrows: true,
 		dots: true,
 		infinite: true,
