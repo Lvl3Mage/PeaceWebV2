@@ -2,6 +2,7 @@
 var $ = require('jquery');
 //IBG  // Also include in SCSS
 import ibg from './libs/ibg.js'
+
 $(document).ready(function(){
 	ibg();
 })
