@@ -8918,6 +8918,12 @@ body.lock {
 .networking-map:not(.networking-map:has(.networking-map__overlay-wrapper:hover)) .networking-map__overlay {
   opacity: 1;
 }
+.networking-map[\:not-has\(.networking-map__overlay-wrapper\:hover\)] .networking-map__logo {
+  opacity: 0;
+}
+.networking-map:not(.networking-map:has(.networking-map__overlay-wrapper:hover)) .networking-map__logo {
+  opacity: 0;
+}
 .networking-map__overlay {
   pointer-events: none;
   transition: all 0.3s;
@@ -8936,6 +8942,19 @@ body.lock {
   }
 }
 .networking-map__overlay img {
+  width: 100%;
+  height: auto;
+}
+.networking-map__logo {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.networking-map__logo img {
   width: 100%;
   height: auto;
 }
