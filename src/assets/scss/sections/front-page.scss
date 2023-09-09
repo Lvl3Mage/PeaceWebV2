@@ -129,7 +129,10 @@
 	&:not(&:has(.networking-map__overlay-wrapper:hover)){
 		.networking-map__overlay{
 			opacity: 1;
-		}	
+		}
+		.networking-map__logo{
+			opacity: 0;
+		}
 	}
 	&__overlay {
 		pointer-events: none;
@@ -149,6 +152,19 @@
 			width: 100%;
 			height: auto;
 			// filter: hue-rotate(90deg);
+		}
+	}
+	&__logo{
+		position: absolute;
+		right: 25px;
+		top: -50px;
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			width: 100%;
+			height: auto;
 		}
 	}
 }
