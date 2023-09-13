@@ -8788,17 +8788,21 @@ body.lock {
 }
 
 .banner-slider__slide {
-  height: 600px;
-  max-height: 80vh;
   position: relative;
 }
 .banner-slider__slide-background {
-  position: absolute;
   width: 100%;
-  height: 100%;
   z-index: -1;
 }
+.banner-slider__slide-background img {
+  width: 100%;
+  height: auto;
+}
 .banner-slider__slide-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;

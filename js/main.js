@@ -198,7 +198,8 @@ $(document).ready(function () {
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    adaptiveHeight: true
   });
   $('.banner-slider-auto').slick({
     autoplay: true,
@@ -208,7 +209,8 @@ $(document).ready(function () {
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    adaptiveHeight: true
   });
   $('.def-slider-1').slick({
     autoplay: true,
