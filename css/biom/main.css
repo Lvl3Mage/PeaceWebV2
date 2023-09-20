@@ -8139,8 +8139,10 @@ a.btn {
   color: #1A8400;
   border-radius: 5px;
   text-align: center;
-  padding: 15px 15px;
   transition: all 0.3s;
+}
+.button-tab:not.button-tab--auto-padding {
+  padding: 15px 15px;
 }
 .button-tab.active {
   background: #1A8400;
@@ -8161,6 +8163,11 @@ a.btn {
 }
 .button-tab--border {
   border: 2px solid #1A8400;
+}
+.button-tab--active-gradient-fill.active {
+  background-origin: border-box !important;
+  border-color: transparent;
+  background: linear-gradient(90deg, #1A8400 -10%, #6FBC31 110%);
 }
 
 .hidden {
@@ -8229,6 +8236,8 @@ body.lock {
 .filter-search {
   background: #FFF;
   position: relative;
+}
+.filter-search:not(.filter-search--auto-width) {
   max-width: 25em;
 }
 .filter-search input {
@@ -8256,18 +8265,16 @@ body.lock {
 }
 .filter-tag {
   background: #FFF;
-  color: #1A8400;
+  color: #9C9C9C;
   border-radius: 5px;
   text-align: center;
   padding: 7px 15px;
   cursor: pointer;
-  border: 1px solid #1A8400;
   transition: all 0.3s;
   margin: 5px;
 }
 .filter-tag.active {
-  background: #1A8400;
-  color: #FFF;
+  color: #1A8400;
 }
 
 .line-separator--gray {
