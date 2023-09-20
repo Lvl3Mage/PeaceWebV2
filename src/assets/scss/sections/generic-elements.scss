@@ -220,7 +220,10 @@ a.btn{
 	color: $darkGreen;
 	border-radius: 5px;
 	text-align: center;
-	padding: 15px 15px;
+	&:not.button-tab--auto-padding{
+		padding: 15px 15px;
+
+	}
 	transition: all 0.3s;
 	&.active{
 		background: $darkGreen;
@@ -241,7 +244,14 @@ a.btn{
 	}
 	&--border{
 		border: 2px solid $darkGreen;
-	}	
+	}
+	&--active-gradient-fill{
+		&.active{
+			background-origin: border-box !important;
+			border-color: transparent;
+			background:linear-gradient(90deg, $darkGreen -10%, $lightGreen 110%);
+		}
+	}
 }
 .hidden{
 	display: none;
@@ -308,7 +318,10 @@ body.lock{
 	&-search{
 		background: $white;
 		position: relative;
-		max-width: 25em;
+		&:not(&--auto-width){
+			max-width: 25em;
+
+		}
 		input{
 			border: 1px solid $darkGreen;
 			border-radius: 4px;
@@ -335,17 +348,17 @@ body.lock{
 	}
 	&-tag{
 		background: $white;
-		color: $darkGreen;
+		color: $lightGray;
 		border-radius: 5px;
 		text-align: center;
 		padding: 7px 15px;
 		cursor: pointer;
 
-		border: 1px solid $darkGreen;
+		// border: 1px solid $darkGreen;
 		transition: all 0.3s;
 		&.active{
-			background: $darkGreen;
-			color: $white;
+			// background: $darkGreen;
+			color: $darkGreen;
 		}
 		margin: 5px;
 	}
