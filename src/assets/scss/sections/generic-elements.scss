@@ -345,6 +345,73 @@ body.lock{
 			height: 100%;
 			z-index: 1;
 		}
+		&:has(input:focus){
+			.filter-search__suggestions{
+				pointer-events:auto;
+				opacity: 1;
+			}
+		}
+		&__suggestions{
+			transition: all 0.2s;
+			opacity: 0;
+			pointer-events: none;
+			border-radius: 4px;
+			border: 1px solid var(--Main-Green, #1A8400);
+			background: var(--White, #FFF);
+			box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.25);
+			position: absolute;
+			top: calc(100% + 25px);
+			left: 0;
+			right: 0;
+			z-index: 100;
+			padding: 10px 0;
+			padding-right: 10px;
+		}
+		&__suggestion-wrapper {
+			
+			padding: 10px;
+			
+			max-height: 200px;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			&::-webkit-scrollbar {
+				width: 4px;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+				background-color: #D9D9D9;
+				border-left: 1px solid transparent;
+				border-right: 1px solid transparent;
+				background-clip: padding-box;
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+				border-radius: 3px;
+				background-color: #1A8400;
+				
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+				cursor: pointer;
+				/*redifine styles like background and border radius*/
+			}
+
+		}
+		&__suggestion {
+			border-bottom: 1px solid #D9D9D9;
+			padding: 5px 10px;
+			cursor: pointer;
+			transition: all 0.1s;
+			&:hover{
+				background: $darkGreen;
+				color: #fff;
+			}
+		}
+
 	}
 	&-tag{
 		background: $white;
@@ -361,6 +428,28 @@ body.lock{
 			color: $darkGreen;
 		}
 		margin: 5px;
+	}
+}
+.paper-tabs {
+	display: flex;
+	overflow: hidden;
+	padding-top: 25px;
+	&--underline{
+		border-bottom: 1px solid rgba($darkGreen, 0.5);
+	}
+	&__tab {
+		border-radius: 5px 5px 0px 0px;
+		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+		padding: 12px 25px;
+		cursor: pointer;
+		transition: all 0.1s;
+		&.active{
+			position: relative;
+			z-index: 10;
+			color: #fff;
+			background: linear-gradient(101deg, $darkGreen 0%, $lightGreen 100%);
+
+		}
 	}
 }
 .line-separator{
@@ -481,6 +570,10 @@ body.lock{
 		padding: 20px 60px;
 		background: $darkGreen;
 		opacity: 0.9;
+		
+		&--static-position{
+			position: static;
+		}
 	}
 }
 .def-text{
