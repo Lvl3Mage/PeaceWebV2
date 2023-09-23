@@ -7719,8 +7719,8 @@ ul:not(.def-text > ul) {
   content: "";
   flex: 0 0 0.5em;
   height: 0.5em;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid #1A8400;
+  border-right: 2px solid #1A8400;
   transform: rotate(135deg) translateY(0.2em);
   margin-left: 10px;
 }
@@ -7728,8 +7728,8 @@ ul:not(.def-text > ul) {
   content: "";
   flex: 0 0 0.5em;
   height: 0.5em;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid #1A8400;
+  border-right: 2px solid #1A8400;
   transform: rotate(135deg) translateY(0.2em);
   margin-left: 10px;
 }
@@ -7759,11 +7759,10 @@ ul:not(.def-text > ul) {
   background-clip: padding-box;
 }
 .header__navbar > li > ul > li {
-  margin: 7px 0;
+  margin: 0 0;
   cursor: pointer;
   transition: all 0.3s;
   padding: 15px 20px;
-  color: #000;
 }
 .header__navbar > li > ul > li:hover {
   background: #1A8400;
@@ -8139,8 +8138,11 @@ a.btn {
   color: #1A8400;
   border-radius: 5px;
   text-align: center;
-  padding: 15px 15px;
+  line-height: 1.5;
   transition: all 0.3s;
+}
+.button-tab:not(.button-tab--auto-padding) {
+  padding: 10px 15px;
 }
 .button-tab.active {
   background: #1A8400;
@@ -8161,6 +8163,11 @@ a.btn {
 }
 .button-tab--border {
   border: 2px solid #1A8400;
+}
+.button-tab--active-gradient-fill.active {
+  background-origin: border-box !important;
+  border-color: transparent;
+  background: linear-gradient(90deg, #1A8400 -10%, #6FBC31 110%);
 }
 
 .hidden {
@@ -8229,6 +8236,8 @@ body.lock {
 .filter-search {
   background: #FFF;
   position: relative;
+}
+.filter-search:not(.filter-search--auto-width) {
   max-width: 25em;
 }
 .filter-search input {
@@ -8256,18 +8265,16 @@ body.lock {
 }
 .filter-tag {
   background: #FFF;
-  color: #1A8400;
+  color: #9C9C9C;
   border-radius: 5px;
   text-align: center;
   padding: 7px 15px;
   cursor: pointer;
-  border: 1px solid #1A8400;
   transition: all 0.3s;
   margin: 5px;
 }
 .filter-tag.active {
-  background: #1A8400;
-  color: #FFF;
+  color: #1A8400;
 }
 
 .line-separator--gray {
@@ -8682,6 +8689,9 @@ body.lock {
   font-weight: 500;
   color: #9C9C9C;
 }
+.breadcrumbs__container {
+  margin-top: 25px;
+}
 @media screen and (min-width: 992px) {
   .breadcrumbs {
     font-size: 16px;
@@ -8785,17 +8795,21 @@ body.lock {
 }
 
 .banner-slider__slide {
-  height: 600px;
-  max-height: 80vh;
   position: relative;
 }
 .banner-slider__slide-background {
-  position: absolute;
   width: 100%;
-  height: 100%;
   z-index: -1;
 }
+.banner-slider__slide-background img {
+  width: 100%;
+  height: auto;
+}
 .banner-slider__slide-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -8915,6 +8929,12 @@ body.lock {
 .networking-map:not(.networking-map:has(.networking-map__overlay-wrapper:hover)) .networking-map__overlay {
   opacity: 1;
 }
+.networking-map[\:not-has\(.networking-map__overlay-wrapper\:hover\)] .networking-map__logo {
+  opacity: 0;
+}
+.networking-map:not(.networking-map:has(.networking-map__overlay-wrapper:hover)) .networking-map__logo {
+  opacity: 0;
+}
 .networking-map__overlay {
   pointer-events: none;
   transition: all 0.3s;
@@ -8933,6 +8953,19 @@ body.lock {
   }
 }
 .networking-map__overlay img {
+  width: 100%;
+  height: auto;
+}
+.networking-map__logo {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.networking-map__logo img {
   width: 100%;
   height: auto;
 }
