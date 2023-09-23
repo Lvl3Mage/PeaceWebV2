@@ -7719,8 +7719,8 @@ ul:not(.def-text > ul) {
   content: "";
   flex: 0 0 0.5em;
   height: 0.5em;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid #1A8400;
+  border-right: 2px solid #1A8400;
   transform: rotate(135deg) translateY(0.2em);
   margin-left: 10px;
 }
@@ -7728,8 +7728,8 @@ ul:not(.def-text > ul) {
   content: "";
   flex: 0 0 0.5em;
   height: 0.5em;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid #1A8400;
+  border-right: 2px solid #1A8400;
   transform: rotate(135deg) translateY(0.2em);
   margin-left: 10px;
 }
@@ -7759,11 +7759,10 @@ ul:not(.def-text > ul) {
   background-clip: padding-box;
 }
 .header__navbar > li > ul > li {
-  margin: 7px 0;
+  margin: 0 0;
   cursor: pointer;
   transition: all 0.3s;
   padding: 15px 20px;
-  color: #000;
 }
 .header__navbar > li > ul > li:hover {
   background: #1A8400;
@@ -7778,9 +7777,12 @@ ul:not(.def-text > ul) {
   margin: 0 10px;
   list-style: none;
 }
-.header__nav-element.current-menu-item {
+.header__nav-element.current-menu-item, .header__nav-element.current-menu-parent {
   color: #1A8400;
   font-weight: 700;
+}
+.header__nav-element.current-menu-item > ul:not(.current-menu-item), .header__nav-element.current-menu-parent > ul:not(.current-menu-item) {
+  font-weight: 400;
 }
 .header__languages {
   display: flex;
@@ -8139,10 +8141,11 @@ a.btn {
   color: #1A8400;
   border-radius: 5px;
   text-align: center;
+  line-height: 1.5;
   transition: all 0.3s;
 }
-.button-tab:not.button-tab--auto-padding {
-  padding: 15px 15px;
+.button-tab:not(.button-tab--auto-padding) {
+  padding: 10px 15px;
 }
 .button-tab.active {
   background: #1A8400;
