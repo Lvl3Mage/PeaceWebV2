@@ -172,6 +172,9 @@
 	background: #fff;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 0 0 4px 4px;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 	&::-webkit-scrollbar {
 		width: 8px;
 	}
