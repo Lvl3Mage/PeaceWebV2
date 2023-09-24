@@ -211,6 +211,8 @@ $(document).ready(function () {
     cssEase: 'linear'
   });
   $('.def-slider-1').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     infinite: true,
     speed: 500 // fade: true,
@@ -218,6 +220,8 @@ $(document).ready(function () {
 
   });
   $('.def-slider-1-dots').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -226,6 +230,8 @@ $(document).ready(function () {
 
   });
   $('.def-slider-2').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     dots: true,
     infinite: true,
@@ -235,6 +241,8 @@ $(document).ready(function () {
 
   });
   $('.def-slider-3').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -263,6 +271,8 @@ $(document).ready(function () {
     }]
   });
   $('.def-slider-3-dots').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     dots: true,
     infinite: true,
@@ -292,6 +302,8 @@ $(document).ready(function () {
     }]
   });
   $('.def-slider-4').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -320,6 +332,8 @@ $(document).ready(function () {
     }]
   });
   $('.def-slider-4-dots').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     arrows: true,
     dots: true,
     infinite: true,
@@ -395,7 +409,10 @@ function ActivateSimpleTab(simpleTab) {
 
 $(document).on("click", "[data-mob-menu-trigger]", function () {
   $("[data-mob-menu-trigger]").toggleClass("active");
+  let top = Math.max($(".header").offset().top - $(window).scrollTop(), 0) + $(".header").height();
   $(".mob-menu").toggleClass("active");
+  $(".mob-menu__content").css("height", "calc(100vh - " + top + "px)"); // console.log(top);
+
   $(".header__languages").toggleClass("active");
   $('body').toggleClass('lock');
 }); // generic dropdown
@@ -472,6 +489,14 @@ $(document).on("click", "[data-class-toggler]", function () {
 
 
   classToggle.attr('data-toggle-state', target.hasClass(classToToggle));
+}); //Audio
+
+$(document).ready(function () {
+  $('.audio-player__track').attr("value", 0).trigger("input");
+});
+$('.audio-player__track').on('input', function () {
+  this.style.setProperty('--coverage', $(this).val() + "%");
+  console.log("ASADS");
 });
 
 /***/ }),
