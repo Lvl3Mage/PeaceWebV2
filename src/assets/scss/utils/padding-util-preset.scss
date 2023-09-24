@@ -1,5 +1,8 @@
 &{
-	//reset
+//reset
+	&--0{
+		padding: 0;
+	}
 	&--l-0{
 		padding-left: 0;
 	}
@@ -12,191 +15,94 @@
 	&--t-0{
 		padding-top: 0;
 	}
-
-	&--0{
-		padding: 0px;
-	}
-	&--5{
-		padding: 5px;
-	}
-	&--10{
-		padding: 10px;
-	}
-	&--15{
-		padding: 15px;
-	}
-	&--20{
-		padding: 20px;
-	}
-	&--25{
-		padding: 25px;
-	}
-	&--35{
-		padding: 35px;
-	}
-	&--45{
-		padding: 45px;
+//Padding all
+	@for $i from 1 through 10 {
+		&--#{$i * 5}{
+			padding: #{$i * 5}px;
+		}
 	}
 	&--75{
 		padding: 75px;
 	}
-
-	&--l-5{
-		padding-left: 5px;
+	&--100{
+		padding: 100px;
 	}
-	&--l-10{
-		padding-left: 10px;
-	}
-	&--l-15{
-		padding-left: 15px;
-	}
-	&--l-25{
-		padding-left: 25px;
-	}
-	&--l-35{
-		padding-left: 35px;
-	}
-	&--l-45{
-		padding-left: 45px;
+//Left padding
+	@for $i from 1 through 10 {
+		&--l-#{$i * 5}{
+			padding-left: #{$i * 5}px;
+		}
 	}
 	&--l-75{
 		padding-left: 75px;
 	}
-	&--r-5{
-		padding-right: 5px;
+	&--l-100{
+		padding-left: 100px;
 	}
-	&--r-10{
-		padding-right: 10px;
-	}
-	&--r-15{
-		padding-right: 15px;
-	}
-	&--r-25{
-		padding-right: 25px;
-	}
-	&--r-35{
-		padding-right: 35px;
-	}
-	&--r-45{
-		padding-right: 45px;
+//Right padding
+	@for $i from 1 through 10 {
+		&--r-#{$i * 5}{
+			padding-right: #{$i * 5}px;
+		}
 	}
 	&--r-75{
 		padding-right: 75px;
 	}
-	&--b-5{
-		padding-bottom: 5px;
+	&--r-100{
+		padding-right: 100px;
 	}
-	&--b-10{
-		padding-bottom: 10px;
-	}
-	&--b-15{
-		padding-bottom: 15px;
-	}
-	&--b-25{
-		padding-bottom: 25px;
-	}
-	&--b-35{
-		padding-bottom: 35px;
-	}
-	&--b-45{
-		padding-bottom: 45px;
-	}
-	&--b-50{
-		padding-bottom: 50px;
+//Bottom padding
+	@for $i from 1 through 10 {
+		&--b-#{$i * 5}{
+			padding-bottom: #{$i * 5}px;
+		}
 	}
 	&--b-75{
 		padding-bottom: 75px;
 	}
-	&--t-5{
-		padding-top: 5px;
+	&--b-100{
+		padding-bottom: 100px;
 	}
-	&--t-10{
-		padding-top: 10px;
-	}
-	&--t-15{
-		padding-top: 15px;
-	}
-	&--t-25{
-		padding-top: 25px;
-	}
-	&--t-35{
-		padding-top: 35px;
-	}
-	&--t-45{
-		padding-top: 45px;
-	}
-	&--t-50{
-		padding-top: 50px;
+//Top padding
+	@for $i from 1 through 10 {
+		&--t-#{$i * 5}{
+			padding-top: #{$i * 5}px;
+		}
 	}
 	&--t-75{
 		padding-top: 75px;
 	}
-	&--x-5{
-		padding-left: 5px;
-		padding-right: 5px;
+	&--t-100{
+		padding-top: 100px;
 	}
-	&--x-10{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	&--x-15{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	&--x-20{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	&--x-25{
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-	&--x-35{
-		padding-left: 35px;
-		padding-right: 35px;
-	}
-	&--x-45{
-		padding-left: 45px;
-		padding-right: 45px;
+//Horizontal padding
+	@for $i from 1 through 10 {
+		&--x-#{$i * 5}{
+			padding-left: #{$i * 5}px;
+			padding-right: #{$i * 5}px;
+		}
 	}
 	&--x-75{
 		padding-left: 75px;
 		padding-right: 75px;
 	}
-	&--y-5{
-		padding-top: 5px;
-		padding-bottom: 5px;
+	&--x-100{
+		padding-left: 100px;
+		padding-right: 100px;
 	}
-	&--y-10{
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	&--y-15{
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
-	&--y-20{
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-	&--y-25{
-		padding-top: 25px;
-		padding-bottom: 25px;
-	}
-	&--y-30{
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	&--y-35{
-		padding-top: 35px;
-		padding-bottom: 35px;
-	}
-	&--y-45{
-		padding-top: 45px;
-		padding-bottom: 45px;
+//Vertical padding
+	@for $i from 1 through 10 {
+		&--y-#{$i * 5}{
+			padding-top: #{$i * 5}px;
+			padding-bottom: #{$i * 5}px;
+		}
 	}
 	&--y-75{
 		padding-top: 75px;
 		padding-bottom: 75px;
+	}
+	&--y-100{
+		padding-top: 100px;
+		padding-bottom: 100px;
 	}
 }

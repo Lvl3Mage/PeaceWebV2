@@ -119,7 +119,7 @@
 	&__nav-element {
 		margin: 0 10px;
 		list-style: none;
-		&.current-menu-item, &.current-menu-parent {
+		&.current-menu-item, &.current-menu-parent, &.current-page-ancestor {
 			color: $darkGreen;
 			font-weight: 700;
 			&>ul:not(.current-menu-item) {

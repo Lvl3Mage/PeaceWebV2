@@ -419,7 +419,7 @@ body.lock{
 		color: $lightGray;
 		border-radius: 5px;
 		text-align: center;
-		padding: 7px 15px;
+		padding: 4px; // 7px 15px;
 		cursor: pointer;
 
 		// border: 1px solid $darkGreen;
@@ -428,7 +428,7 @@ body.lock{
 			// background: $darkGreen;
 			color: $darkGreen;
 		}
-		margin: 5px;
+		//margin: 5px;
 	}
 }
 .paper-tabs {
@@ -547,7 +547,7 @@ body.lock{
 	position: relative;
 	padding-left: 36px;
 	margin-left: 16px;
-	padding-bottom: 50px;
+	//padding-bottom: 50px;
 	&--no-line{
 		border: none;
 	}
