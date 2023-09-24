@@ -61,13 +61,17 @@
 	padding: 15px;
 	border-radius: 5px;
 	transition: all 0.3s;
-}
-.slick-current{
-	.social-card{
+	&:hover{
 		background: $darkGreen;
 		color: #fff;
 	}
 }
+// .slick-current{
+// 	.social-card{
+// 		background: $darkGreen;
+// 		color: #fff;
+// 	}
+// }
 .image-card{
 	border-radius: 5px;
 	border: 1px solid $darkGreen;
