@@ -95,7 +95,7 @@
 	&__navbar {
 		position: absolute;
 		width: 100%;
-		height: calc(100% + 150px);
+		// height: calc(100% + 150px);
 		top: 0;
 		left: 0;
 		background: #FFF;
@@ -106,7 +106,7 @@
 		// flex-grow: 1;
 		&>ul{
 			width: 100%;
-
+			padding-top: 70px !important;
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
