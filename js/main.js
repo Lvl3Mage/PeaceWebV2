@@ -384,7 +384,9 @@ $(document).ready(function () {
   $.datepicker.setDefaults($.datepicker.regional.ru); // $.selectmenu.setDefaults($.datepicker.regional.ru );
 
   $(".filter-datepicker__input").datepicker();
-  $(".filter-dropdown select").selectmenu();
+  $(".filter-dropdown select").selectmenu({
+    width: "auto"
+  });
 });
 $(document).ready(function () {
   $('[data-simple-tab].active').each(function () {
