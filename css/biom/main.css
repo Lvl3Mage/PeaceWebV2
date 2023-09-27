@@ -724,6 +724,9 @@ ul:not(.def-text > ul) {
 .fx-ai--sa {
   align-items: space-around;
 }
+.fx-ai--st {
+  align-items: stretch;
+}
 .fx-wr--nw {
   flex-wrap: nowrap;
 }
@@ -2420,6 +2423,9 @@ ul:not(.def-text > ul) {
   .lg-fx-ai--sa {
     align-items: space-around;
   }
+  .lg-fx-ai--st {
+    align-items: stretch;
+  }
   .lg-fx-wr--nw {
     flex-wrap: nowrap;
   }
@@ -4107,6 +4113,9 @@ ul:not(.def-text > ul) {
   }
   .md-fx-ai--sa {
     align-items: space-around;
+  }
+  .md-fx-ai--st {
+    align-items: stretch;
   }
   .md-fx-wr--nw {
     flex-wrap: nowrap;
@@ -5796,6 +5805,9 @@ ul:not(.def-text > ul) {
   .sm-fx-ai--sa {
     align-items: space-around;
   }
+  .sm-fx-ai--st {
+    align-items: stretch;
+  }
   .sm-fx-wr--nw {
     flex-wrap: nowrap;
   }
@@ -7484,6 +7496,9 @@ ul:not(.def-text > ul) {
   .xsm-fx-ai--sa {
     align-items: space-around;
   }
+  .xsm-fx-ai--st {
+    align-items: stretch;
+  }
   .xsm-fx-wr--nw {
     flex-wrap: nowrap;
   }
@@ -9171,6 +9186,9 @@ ul:not(.def-text > ul) {
   }
   .xxsm-fx-ai--sa {
     align-items: space-around;
+  }
+  .xxsm-fx-ai--st {
+    align-items: stretch;
   }
   .xxsm-fx-wr--nw {
     flex-wrap: nowrap;
