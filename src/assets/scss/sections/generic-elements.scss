@@ -1,3 +1,4 @@
+
 .card {
 	overflow: hidden;
 	&--rounded {
@@ -220,11 +221,7 @@ a.btn{
 	color: $darkGreen;
 	border-radius: 5px;
 	text-align: center;
-	line-height: 1.5;
-	&:not(.button-tab--auto-padding){
-		padding: 10px 15px;
-
-	}
+	padding: 15px 15px;
 	transition: all 0.3s;
 	&.active{
 		background: $darkGreen;
@@ -245,14 +242,7 @@ a.btn{
 	}
 	&--border{
 		border: 2px solid $darkGreen;
-	}
-	&--active-gradient-fill{
-		&.active{
-			background-origin: border-box !important;
-			border-color: transparent;
-			background:linear-gradient(90deg, $darkGreen -10%, $lightGreen 110%);
-		}
-	}
+	}	
 }
 .hidden{
 	display: none;
@@ -319,10 +309,7 @@ body.lock{
 	&-search{
 		background: $white;
 		position: relative;
-		&:not(&--auto-width){
-			max-width: 25em;
-
-		}
+		// max-width: 25em;
 		input{
 			border: 1px solid $darkGreen;
 			border-radius: 4px;
@@ -412,45 +399,22 @@ body.lock{
 				color: #fff;
 			}
 		}
-
 	}
 	&-tag{
 		background: $white;
-		color: $lightGray;
+		color: $darkGreen;
 		border-radius: 5px;
 		text-align: center;
-		padding: 4px; // 7px 15px;
+		padding: 7px 15px;
 		cursor: pointer;
 
-		// border: 1px solid $darkGreen;
+		border: 1px solid $darkGreen;
 		transition: all 0.3s;
 		&.active{
-			// background: $darkGreen;
-			color: $darkGreen;
+			background: $darkGreen;
+			color: $white;
 		}
-		//margin: 5px;
-	}
-}
-.paper-tabs {
-	display: flex;
-	overflow: hidden;
-	padding-top: 25px;
-	&--underline{
-		border-bottom: 1px solid rgba($darkGreen, 0.5);
-	}
-	&__tab {
-		border-radius: 5px 5px 0px 0px;
-		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
-		padding: 12px 25px;
-		cursor: pointer;
-		transition: all 0.1s;
-		&.active{
-			position: relative;
-			z-index: 10;
-			color: #fff;
-			background: linear-gradient(101deg, $darkGreen 0%, $lightGreen 100%);
-
-		}
+		margin: 5px;
 	}
 }
 .line-separator{
@@ -547,7 +511,7 @@ body.lock{
 	position: relative;
 	padding-left: 36px;
 	margin-left: 16px;
-	//padding-bottom: 50px;
+	padding-bottom: 50px;
 	&--no-line{
 		border: none;
 	}
@@ -571,10 +535,6 @@ body.lock{
 		padding: 20px 60px;
 		background: $darkGreen;
 		opacity: 0.9;
-		
-		&--static-position{
-			position: static;
-		}
 	}
 }
 .def-text{
@@ -856,16 +816,21 @@ body.lock{
 }
 .breadcrumbs {
 	&__wrapper{
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
 	}
 	&__container{
-		margin-top: 25px;
+		order: -1;
+		background: $darkGreen;
+		padding: 5px 0;
 	}
 	font-family: $textFont;
 	@include fSize($tabletWidth, $phoneWidth, $fontSizeXXS_desktop, $fontSizeXXS_mobile);
 	font-weight: 500;
-	color: $lightGray;
+	color: $white;
 	.breadcrumb_last {
-		color: $darkGreen;
+		color: $pastelGreen;
 	}
 
 }
