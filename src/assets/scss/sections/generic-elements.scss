@@ -205,6 +205,62 @@ a.btn{
 			}
 		}
 	}
+	&--dark-gray{
+		transition: all 0.3s;
+		background-color: $darkGray;
+		&:hover{
+			filter: brightness(0.8);
+		}
+		&:active{
+			filter: brightness(0.6);
+		}
+		&-border{
+			transition: all 0.3s;
+			border: 2px solid $darkGray;
+			background: $white;
+			*{
+				transition: all 0.3s;
+			}
+			&:hover{
+				background: darken($darkGray, 5);
+				color: $white;
+				*{
+					color: $white;
+				}
+			}
+			&:active{
+				filter: brightness(0.6);
+			}
+		}
+	}
+	&--light-gray{
+		transition: all 0.3s;
+		background-color: $lightGray;
+		&:hover{
+			filter: brightness(0.8);
+		}
+		&:active{
+			filter: brightness(0.6);
+		}
+		&-border{
+			transition: all 0.3s;
+			border: 2px solid $lightGray;
+			background: $white;
+			*{
+				transition: all 0.3s;
+			}
+			&:hover{
+				background: darken($lightGray, 5);
+				color: $white;
+				*{
+					color: $white;
+				}
+			}
+			&:active{
+				filter: brightness(0.6);
+			}
+		}
+	}
 
 
 
