@@ -528,8 +528,11 @@ body.lock{
 	&__image {
 		position: relative;
 	}
+	img + &__image-text {
+	  position: absolute;
+	}
 	&__image-text {
-		position: absolute;
+		// position: absolute;
 		bottom: 0;
 		width: 100%;
 		padding: 20px 60px;
@@ -537,6 +540,7 @@ body.lock{
 		opacity: 0.9;
 	}
 }
+
 .def-text{
 	text-align: justify;
 	.alignleft{
