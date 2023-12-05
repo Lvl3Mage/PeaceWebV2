@@ -8,6 +8,7 @@
 	&__slide-background {
 		// position: absolute;
 		width: 100%;
+		overflow: hidden;
 		// height: 100%;
 		z-index: -1;
 		object-fit: cover;
