@@ -871,22 +871,23 @@ body.lock{
 	}
 }
 .breadcrumbs {
-	&__wrapper{
-		display: flex;
-		min-width: 0;
-		flex-direction: column;
-	}
+	// &__wrapper{
+	// 	display: flex;
+	// 	min-width: 0;
+	// 	flex-direction: column;
+	// }
 	&__container{
-		order: -1;
-		background: $darkGreen;
-		padding: 5px 0;
+		margin-top: 25px;
+		// order: -1;
+		// background: $darkGreen;
+		// padding: 5px 0;
 	}
 	font-family: $textFont;
 	@include fSize($tabletWidth, $phoneWidth, $fontSizeXXS_desktop, $fontSizeXXS_mobile);
 	font-weight: 500;
-	color: $white;
+	color: $lightGray;
 	.breadcrumb_last {
-		color: $pastelGreen;
+		color: $darkGreen;
 	}
 
 }
