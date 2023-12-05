@@ -40,8 +40,8 @@
 /* Vars:
   ========================================================================== */
 body {
-  font-family: Roboto, sans-serif;
-  color: #1A8400;
+  font-family: Helvetica, sans-serif;
+  color: #0F4901;
   font-size: calc((100vw - 576px)/(992 - 576)*(16 - 12) + 12px);
   font-weight: 400;
   line-height: 1.2;
@@ -10994,7 +10994,7 @@ ul:not(.def-text > ul) {
   text-align: justify;
 }
 .text--text-font {
-  font-family: Roboto, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 .text--italic {
   font-style: italic;
@@ -11009,7 +11009,7 @@ ul:not(.def-text > ul) {
   color: #474747;
 }
 .text--dark-green {
-  color: #1A8400;
+  color: #0F4901;
 }
 .text--dark-blue {
   color: #0F509F;
@@ -12229,7 +12229,7 @@ body.lock {
 }
 
 .breadcrumbs {
-  font-family: Roboto, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: calc((100vw - 576px)/(992 - 576)*(16 - 12) + 12px);
   font-weight: 500;
   color: #FFF;
@@ -12352,10 +12352,13 @@ body.lock {
 .banner-slider__slide-background {
   width: 100%;
   z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 65vh;
 }
 .banner-slider__slide-background img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .banner-slider__slide-text {
   position: absolute;
@@ -12381,6 +12384,18 @@ body.lock {
   .banner-slider__slide-text span, .banner-slider__slide-text h1 {
     margin-left: 0;
   }
+}
+.banner-slider__bottom_arrow {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  z-index: 1;
+  bottom: 20px;
+  left: calc(50% - 15px);
+}
+.banner-slider__bottom_arrow img {
+  width: 100%;
+  height: auto;
 }
 
 .card-decor-gradient {
