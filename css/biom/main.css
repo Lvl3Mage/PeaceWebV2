@@ -12346,6 +12346,7 @@ img + .history-block__image-text {
 }
 .banner-slider__slide-background {
   width: 100%;
+  overflow: hidden;
   z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
