@@ -11933,8 +11933,10 @@ body.lock {
 .history-block__image {
   position: relative;
 }
-.history-block__image-text {
+img + .history-block__image-text {
   position: absolute;
+}
+.history-block__image-text {
   bottom: 0;
   width: 100%;
   padding: 20px 60px;
