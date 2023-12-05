@@ -12232,17 +12232,10 @@ body.lock {
   font-family: Helvetica, sans-serif;
   font-size: calc((100vw - 576px)/(992 - 576)*(16 - 12) + 12px);
   font-weight: 500;
-  color: #FFF;
-}
-.breadcrumbs__wrapper {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
+  color: #9C9C9C;
 }
 .breadcrumbs__container {
-  order: -1;
-  background: #1A8400;
-  padding: 5px 0;
+  margin-top: 25px;
 }
 @media screen and (min-width: 992px) {
   .breadcrumbs {
@@ -12255,7 +12248,7 @@ body.lock {
   }
 }
 .breadcrumbs .breadcrumb_last {
-  color: #E2FFB1;
+  color: #1A8400;
 }
 
 .page-numbers {
