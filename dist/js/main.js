@@ -194,7 +194,7 @@ $(document).ready(function () {
 
   $('.banner-slider').slick({
     arrows: true,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     fade: true,
@@ -205,7 +205,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     fade: true,

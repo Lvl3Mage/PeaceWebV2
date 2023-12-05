@@ -2,7 +2,7 @@
   ========================================================================== */
 
 // Fonts
-$textFont                : Roboto, sans-serif;
+$textFont                : Helvetica, sans-serif;
 // $titleFont               : RobotoCondensed, sans-serif;
 
 
@@ -48,6 +48,7 @@ $lightGray               : #9C9C9C;
 $darkGray                : #474747;
 $black                   : #000;
 $darkGreen               : #1A8400;
+$deepDarkGreen           : #0F4901;
 $lightGreen              : #6FBC31;
 $pastelGreen             : #E2FFB1;
 $darkBlue                : #0F509F;
@@ -59,7 +60,7 @@ $highlightColor          : $darkGreen;
 
 // Font presets
 $defFont                 : $textFont;
-$defFontColor            : $darkGreen;
+$defFontColor            : $deepDarkGreen;
 $defFontSize_desktop     : $fontSizeXXS_desktop;
 $defFontSize_mobile      : $fontSizeXXS_mobile;
 $defFontWeight           : 400;
