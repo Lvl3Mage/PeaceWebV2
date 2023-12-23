@@ -480,3 +480,184 @@
 	// 	width: 100%;
 	// }
 }
+.radial-menu{
+	&__wrapper{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__container{
+		position: relative;
+		padding-bottom: 15%;
+		padding-top: 15px;
+		overflow: hidden;
+		@media screen and (max-width: 675px) {
+			padding-bottom: 18%;
+		}
+
+	}
+
+	position: relative;
+	width: 60%;
+	aspect-ratio: 2/1;
+	margin: 5%;
+	margin-top: 100px;
+	padding: 0;
+	font-size: 26px;
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width: 575px) {
+		font-size: 16px;
+		width: 45%;
+		margin-bottom: 35px;
+	}
+	// width: 900px;
+	// margin: auto;
+	li{
+		$radialItems: 7;
+		@for $i from 1 through $radialItems {
+			&:nth-child(#{$i}){
+				list-style: none;
+				position: absolute;
+				left: calc(50% - sin(#{180deg * (($i - 1) / ($radialItems - 1)) + 90deg})*50%*(1/2)*(2) - 5%);
+				bottom: calc(sin(#{180deg * (($i - 1) / ($radialItems - 1))})*50%*(2) - 5%);
+				width: 10%;
+				aspect-ratio: 1/1;
+				span{
+					position: absolute;
+					right: 100%;
+					padding: 0 10px;
+					font-size: 0.75em;
+					color: #fff;
+
+				}
+				i{
+					width: 100%;
+					height: auto;
+				}
+
+			}
+		}
+
+		@for $i from 1 through (ceil($radialItems / 2) - 1)  {
+			&:nth-child(#{$i}){
+				span{
+					right: 100%;
+					top: 0;
+					text-align: right;
+
+				}
+			}
+		}
+
+		@for $i from (ceil($radialItems / 2) + 1) through $radialItems {
+			&:nth-child(#{$i}){
+				span{
+					left: 100%;
+					top: 0;
+				}
+			}
+		}
+		&:nth-child(#{ceil($radialItems / 2)}){
+			span{
+				left: -100px;
+				right: -100px;
+				bottom: 100%;
+				padding-bottom: 10px;
+				margin: auto;
+				text-align: center;
+			}
+		}
+		a{
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: #fff;
+			color: $darkGreen;
+			
+
+		}
+		&.active{
+			a{
+				background: $darkGreen;
+				color: #fff;
+				text-transform: uppercase;
+				font-weight: bold;
+				span{
+					font-size: 1em;
+
+				}
+
+			}
+		}
+	}
+	&__center{
+		position: absolute;
+		bottom: 5%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 10%;
+		aspect-ratio:1/1;
+		a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: $darkGreen;
+			color: #fff;
+			span{
+				display: none;
+			}
+			font-size: 2em;
+
+		}
+	}
+	&__decor{
+		position: absolute;
+		&--1{
+			left: -65%;
+			right: -65%;
+			bottom: -65%;
+			top: -65%;
+			border: 2px solid #4498FF;
+			border-radius: 50%;
+		}
+		&--2{
+			left: -135%;
+			right: -135%;
+			bottom: -135%;
+			top: -135%;
+			border: 2px solid #4498FF7F;
+			border-radius: 50%;
+		}
+		&--3{
+
+			left: -205%;
+			right: -205%;
+			bottom: -205%;
+			top: -205%;
+			border: 2px solid #4498FF3F;
+			border-radius: 50%;
+		}
+	}
+	&__hand{
+		position: absolute;
+		left: 35%;
+		top: 50%;
+		height: 30vw;
+		img{
+			height: 100%;
+			width: auto;
+		}
+	}
+}
