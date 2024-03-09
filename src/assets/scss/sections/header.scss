@@ -500,9 +500,14 @@
 
 	position: relative;
 	width: 60%;
+	max-width:800px;
 	aspect-ratio: 2/1;
 	margin: 5%;
-	margin-top: 100px;
+	margin-top: 15%;
+	@media screen and (max-width: 1600px) {
+		margin-top: 100px;
+		
+	}
 	padding: 0;
 	font-size: 26px;
 	@media screen and (max-width: 768px) {
@@ -604,6 +609,8 @@
 		right: 0;
 		margin: auto;
 		width: 10%;
+		max-width: 150px;
+
 		aspect-ratio:1/1;
 		a{
 			display: flex;
